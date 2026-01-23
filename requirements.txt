@@ -1,0 +1,9 @@
+# Dependencies for development
+ipython
+
+# Dependencies for building
+build
+autoapi
+pytest
+pytest-cov
+sphinx-autoapi
