@@ -2,7 +2,7 @@
 # Type: PyPi
 # Author: Davide Ponzini
 
-NAME=sql_error_categorizer
+NAME=sql_error_taxonomy
 VENV=./venv
 REQUIREMENTS=requirements.txt
 
@@ -36,14 +36,7 @@ uninstall: $(VENV)
 documentation:
 	make html SPHINXBUILD="../$(VENV_BIN)/sphinx-build" -C docs/
 
-test: install
-	$(VENV_BIN)/python -m pytest
-
-coverage: install
-	$(VENV_BIN)/python -m pytest --cov=$(NAME) --cov-report=html:tests/htmlcov
-	open tests/htmlcov/index.html
-
-upload: test documentation
+upload: documentation
 	$(VENV_BIN)/python -m pip install --upgrade twine
 	$(VENV_BIN)/python -m twine upload --verbose dist/*
 
