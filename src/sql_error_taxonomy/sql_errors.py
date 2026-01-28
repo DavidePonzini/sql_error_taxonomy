@@ -67,7 +67,7 @@ class SqlErrors(IntEnum):
     LOG_60_JOIN_ON_INCORRECT_COLUMN_MATCHES_POSSIBLE                    = 60
     LOG_61_JOIN_WITH_INCORRECT_COMPARISON_OPERATOR                      = 61
     LOG_62_MISSING_JOIN                                                 = 62
-    LOG_63_MPROPER_NESTING_OF_EXPRESSIONS                               = 63
+    LOG_63_IMPROPER_NESTING_OF_EXPRESSIONS                              = 63
     LOG_64_IMPROPER_NESTING_OF_SUBQUERIES                               = 64
     LOG_65_EXTRANEOUS_QUOTES                                            = 65
     LOG_66_MISSING_EXPRESSION                                           = 66
