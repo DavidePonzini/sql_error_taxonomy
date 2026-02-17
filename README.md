@@ -1,4 +1,4 @@
-# Lightweight SQL Error Taxonomy
+# SQL Error Taxonomy
 
 This repository provides a lightweight SQL error taxonomy aimed at supporting uniform error classification in educational and automated settings.
 
@@ -26,9 +26,75 @@ SQL errors can be organized into four categories:
    - *Data demand:* List all cities in which stores are located, without repetitions.  
    - Even though the query returns the correct result, using `GROUP BY` (instead of `SELECT DISTINCT`) just to remove duplicate values is both less efficient and harder to read.
 
-## Documentation
+## Taxonomy
 
-- **Error definitions:** see [`ERROR_DEFINITIONS.md`](ERROR_DEFINITIONS.md)
+**Error definitions:** see [`ERROR_DEFINITIONS.md`](ERROR_DEFINITIONS.md)
+
+
+### Syntax errors
+| Subcategory | ID  | Name
+| :---------- | :-: | :---
+|             |     | 
+| Ambiguous database object
+|             | 1   | [Ambiguous column](ERROR_DEFINITIONS.md#ambiguous-column)
+|             | 2   | [Ambiguous function](ERROR_DEFINITIONS.md#ambiguous-function)
+| Undefined database object
+|             | 3   | [Undefined column](ERROR_DEFINITIONS.md)
+|             | 4   | [Undefined function](ERROR_DEFINITIONS.md)
+|             | 5   | [Undefined parameter](ERROR_DEFINITIONS.md)
+|             | 6   | [Undefined object](ERROR_DEFINITIONS.md)
+|             | 7   | [Invalid schema name](ERROR_DEFINITIONS.md)
+|             |     | [Misspellings](ERROR_DEFINITIONS.md)
+|             |     | [Synonyms](ERROR_DEFINITIONS.md)
+|             |     | [Omitting quotes around character data](ERROR_DEFINITIONS.md)
+| Data type mismatch
+|             |     | [Failure to specify column name twice](ERROR_DEFINITIONS.md)
+|             |     | [Data type mismatch](ERROR_DEFINITIONS.md)
+| Illegal aggregate function placement
+|             |     | [Using aggregate function outside SELECT or HAVING](ERROR_DEFINITIONS.md)
+|             |     | [Grouping error: aggregate functions cannot be nested](ERROR_DEFINITIONS.md)
+| Illegal or insufficient grouping
+|             |     | [Grouping error: extraneous or omitted grouping column](ERROR_DEFINITIONS.md)
+|             |     | [Strange HAVING: HAVING without GROUP BY](ERROR_DEFINITIONS.md)
+| Common syntax error
+|             |     | [Confusing function with function parameter](ERROR_DEFINITIONS.md)
+|             |     | [Using WHERE twice](ERROR_DEFINITIONS.md)
+|             |     | [Omitting the FROM clause](ERROR_DEFINITIONS.md)
+|             |     | [Comparison with NULL](ERROR_DEFINITIONS.md)
+|             |     | [Omitting the semicolon](ERROR_DEFINITIONS.md)
+|             |     | [Date time field overflow](ERROR_DEFINITIONS.md)
+|             |     | [Duplicate clause](ERROR_DEFINITIONS.md)
+|             |     | [Using an undefined correlation name](ERROR_DEFINITIONS.md)
+|             |     | [Too many columns in subquery](ERROR_DEFINITIONS.md)
+|             |     | [Confusing table names with column names](ERROR_DEFINITIONS.md)
+|             |     | [Restriction in SELECT clause (e.g., SELECT fee >10)](ERROR_DEFINITIONS.md)
+|             |     | [Projection in WHERE clause (e.g., WHERE firstname, surname)](ERROR_DEFINITIONS.md)
+|             |     | [Confusing the order of keywords (e.g., FROM customer SELECT fee)](ERROR_DEFINITIONS.md)
+|             |     | [Confusing the logic of keywords (e.g. grouping instead of ordering)](ERROR_DEFINITIONS.md)
+|             |     | [Confusing the syntax of keywords (e.g., LIKE ('A,' 'B'))](ERROR_DEFINITIONS.md)
+|             |     | [Omitting commas](ERROR_DEFINITIONS.md)
+|             |     | [Curly, square or unmatched brackets](ERROR_DEFINITIONS.md)
+|             |     | [IS where not applicable](ERROR_DEFINITIONS.md)
+|             |     | [Nonstandard keywords or standard keywords in wrong context](ERROR_DEFINITIONS.md)
+|             |     | [Nonstandard operators (e.g., &&, \|\| or ==)](ERROR_DEFINITIONS.md)
+|             |     | [Additional semicolon](ERROR_DEFINITIONS.md)
+
+
+### Semantic errors
+| Subcategory | ID  | Name
+| :---------- | :-: | :---
+|             |     | 
+
+### Logic errors
+| Subcategory | ID  | Name
+| :---------- | :-: | :---
+|             |     | 
+
+### Complications
+| Subcategory | ID  | Name
+| :---------- | :-: | :---
+|             |     | 
+
 
 ## References
 

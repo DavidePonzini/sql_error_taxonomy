@@ -41,8 +41,7 @@ A *syntax error* occurs when a SQL query violates the syntactic or typing rules 
 Syntax errors typically reflect difficulties with SQL grammar, clause structure, or expression formation, and often arise in early stages of learning.
 
 ## Errors
-### SYN-1 Ambiguous Database object
-#### 1. Ambiguous column  
+### Ambiguous column
 **Definition:** referring to a column present in at least two tables
 referenced in the FROM clause, without specifying which table
 the column belongs to.
@@ -62,7 +61,7 @@ SELECT customer.street
 FROM customer, store
 ```
 
-#### 2. Ambiguous function
+### Ambiguous function
 **Definition:** 
 
 **Example:** 
