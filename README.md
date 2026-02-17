@@ -34,7 +34,6 @@ SQL errors can be organized into four categories:
 ### Syntax errors
 | Subcategory | ID  | Name
 | :---------- | :-: | :---
-|             |     | 
 | Ambiguous database object
 |             | 1   | [Ambiguous column](ERROR_DEFINITIONS.md#ambiguous-column)
 |             | 2   | [Ambiguous function](ERROR_DEFINITIONS.md#ambiguous-function)
