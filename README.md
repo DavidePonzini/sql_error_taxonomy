@@ -34,10 +34,10 @@ SQL errors can be organized into four categories:
 ### Syntax errors
 | Subcategory | ID  | Name
 | :---------- | :-: | :---
-| Ambiguous database object
+| **Ambiguous database object**
 |             | 1   | [Ambiguous column](ERROR_DEFINITIONS.md#ambiguous-column)
 |             | 2   | [Ambiguous function](ERROR_DEFINITIONS.md#ambiguous-function)
-| Undefined database object
+| **Undefined database object**
 |             | 3   | [Undefined column](ERROR_DEFINITIONS.md)
 |             | 4   | [Undefined function](ERROR_DEFINITIONS.md)
 |             | 5   | [Undefined parameter](ERROR_DEFINITIONS.md)
@@ -46,16 +46,16 @@ SQL errors can be organized into four categories:
 |             |     | [Misspellings](ERROR_DEFINITIONS.md)
 |             |     | [Synonyms](ERROR_DEFINITIONS.md)
 |             |     | [Omitting quotes around character data](ERROR_DEFINITIONS.md)
-| Data type mismatch
+| **Data type mismatch**
 |             |     | [Failure to specify column name twice](ERROR_DEFINITIONS.md)
 |             |     | [Data type mismatch](ERROR_DEFINITIONS.md)
-| Illegal aggregate function placement
+| **Illegal aggregate function placement**
 |             |     | [Using aggregate function outside SELECT or HAVING](ERROR_DEFINITIONS.md)
 |             |     | [Grouping error: aggregate functions cannot be nested](ERROR_DEFINITIONS.md)
-| Illegal or insufficient grouping
+| **Illegal or insufficient grouping**
 |             |     | [Grouping error: extraneous or omitted grouping column](ERROR_DEFINITIONS.md)
 |             |     | [Strange HAVING: HAVING without GROUP BY](ERROR_DEFINITIONS.md)
-| Common syntax error
+| **Common syntax error**
 |             |     | [Confusing function with function parameter](ERROR_DEFINITIONS.md)
 |             |     | [Using WHERE twice](ERROR_DEFINITIONS.md)
 |             |     | [Omitting the FROM clause](ERROR_DEFINITIONS.md)
