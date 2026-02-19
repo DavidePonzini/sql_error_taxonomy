@@ -1,17 +1,22 @@
-﻿## Unused correlation name
+## Unused correlation name
 ### Definition
 A correlation name (alias) is defined for a table but not used in the query.
 
+### Data demand
+*(Not relevant)*
+
 ### Example
 ```sql
-SELECT name FROM students s;
+SELECT cName
+FROM customer AS c;
 ```
 
 ### Explaination
-The query defines a correlation name 's' for the students table but does not use it anywhere in the query. This adds unnecessary complexity without any benefit.
+The query defines a correlation name `c` for the `customer` table but does not use it anywhere in the query. This adds unnecessary complexity without any benefit.
 
 ### Correction
 ```sql
-SELECT name FROM students;
+SELECT cName
+FROM customer;
 ```
 

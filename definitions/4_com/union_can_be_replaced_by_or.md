@@ -1,17 +1,29 @@
-﻿## UNION can be replaced by OR
+## UNION can be replaced by OR
 ### Definition
-Two SELECT statements combined with UNION can be simplified to a single SELECT with an OR condition.
+Two `SELECT` statements combined with `UNION` select the same data from the same table and have mutually exclusive conditions. In such cases, the `UNION` can be replaced by a single `SELECT` statement with an `OR` condition.
+
+### Data demand
+List the IDs and names of customers who are either younger than 18 or older than 30.
 
 ### Example
 ```sql
-SELECT name FROM students WHERE age < 18 UNION SELECT name FROM students WHERE grade = 'A';
+SELECT cID, cName
+FROM customer
+WHERE age < 18
+UNION
+SELECT cID, cName
+FROM customer
+WHERE age > 30;
 ```
 
 ### Explaination
-The query retrieves the names of students who are either younger than 18 or have received an 'A' grade. This can be simplified by using a single SELECT statement with an OR condition in the WHERE clause, which is more straightforward and efficient.
+The two queries retrieve names of customer from disjoint age groups (younger than 18 and older than 30). Since there is no overlap between these two groups, the same result can be achieved with a single query using an `OR` condition, which is more efficient and easier to read.
 
 ### Correction
 ```sql
-SELECT name FROM students WHERE age < 18 OR grade = 'A';
+SELECT cID, cName
+FROM customer
+WHERE
+    age < 18
+    OR age > 30;
 ```
-

@@ -1,17 +1,22 @@
-﻿## GROUP BY can be replaced with DISTINCT
+## GROUP BY can be replaced with DISTINCT
 ### Definition
-All GROUP BY columns are also in the SELECT clause without any aggregate functions, making DISTINCT a simpler alternative.
+All `GROUP BY` columns are also in the `SELECT` clause without any aggregate functions, making `DISTINCT` a simpler alternative.
+
+### Data demand
+*(Not relevant)*
 
 ### Example
 ```sql
-SELECT name, age FROM students GROUP BY name, age;
+SELECT city, street
+FROM customer
+GROUP BY city, street;
 ```
 
 ### Explaination
-The query groups the students by their name and age, but does not use any aggregate functions. Since the SELECT clause only includes the grouped columns, using DISTINCT is a simpler and more efficient way to achieve the same result.
+The query groups customers by `city` and `street`, but it does not perform any aggregation. Since all `GROUP BY` columns are also in the `SELECT` clause without any aggregate functions, the same result can be achieved using `DISTINCT`, which is simpler and more efficient in this case.
 
 ### Correction
 ```sql
-SELECT DISTINCT name, age FROM students;
+SELECT DISTINCT cName, cID FROM customer;
 ```
 

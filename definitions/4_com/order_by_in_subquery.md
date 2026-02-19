@@ -1,17 +1,28 @@
-﻿## ORDER BY in subquery
+## ORDER BY in subquery
 ### Definition
-An ORDER BY clause is used in a subquery where it does not affect the final result set.
+An `ORDER BY` clause is used in a subquery where it does not affect the final result set.
 
 ### Example
 ```sql
-SELECT name FROM students WHERE name IN (SELECT name FROM teachers ORDER BY name);
+SELECT city
+FROM customer
+WHERE city IN (
+    SELECT city
+    FROM store
+    ORDER BY city
+);
 ```
 
 ### Explaination
-The query retrieves the names of students who have the same name as any teacher. However, the ORDER BY clause in the subquery is unnecessary, as the order of rows in a subquery does not impact the final result set of the outer query.
+The main query retrieves cities from the `customer` table that are present in the list of cities returned by the subquery. The order of cities in the subquery's result does not affect which cities are included in the final output, making the `ORDER BY` clause unnecessary in this context.
 
 ### Correction
 ```sql
-SELECT name FROM students WHERE name IN (SELECT name FROM teachers);
+SELECT city
+FROM customer
+WHERE city IN (
+    SELECT city
+    FROM store
+);
 ```
 

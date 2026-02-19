@@ -1,17 +1,22 @@
-﻿## Unnecessary DISTINCT in SELECT clause
+## Unnecessary DISTINCT in SELECT clause
 ### Definition
-DISTINCT is used on a SELECT clause where duplicate values cannot occur, adding unnecessary complexity.
+`DISTINCT` is used on a `SELECT` clause where duplicate values cannot occur, adding unnecessary complexity.
+
+### Data demand
+*(Not relevant)*
 
 ### Example
 ```sql
-SELECT DISTINCT id, name FROM students;
+SELECT DISTINCT cID, cName
+FROM customer;
 ```
 
 ### Explaination
-The id column is a primary key, meaning each value is unique. Therefore, using DISTINCT is redundant since there cannot be any duplicate rows in the result set based on the id column.
+The `cID` column is a primary key, meaning each value is unique. Therefore, using `DISTINCT` is redundant since there cannot be any duplicate rows in the result set.
 
 ### Correction
 ```sql
-SELECT id, name FROM students;
+SELECT cID, cName
+FROM customer;
 ```
 

@@ -1,17 +1,24 @@
-﻿## Unnecessary column in ORDER BY clause
+## Unnecessary column in ORDER BY clause
 ### Definition
-A column is included in the ORDER BY clause that does not affect the ordering of the results due to functional dependencies.
+A column is included in the `ORDER BY` clause that does not affect the ordering of the results due to functional dependencies.
+
+### Data demand
+*(Not relevant)*
 
 ### Example
 ```sql
-SELECT id, name FROM students ORDER BY id, name;
+SELECT cID, cName
+FROM customer
+ORDER BY cID, cName;
 ```
 
 ### Explaination
-The query orders the results by both id and name. However, since id is a primary key, it uniquely identifies each row. Therefore, ordering by name after id does not change the order of the results, making it unnecessary.
+The query orders the results by both `cID` and `cName`. However, since `cID` is a primary key, it uniquely identifies each row. Therefore, ordering by `cName` after `cID` does not change the order of the results, making it unnecessary.
 
 ### Correction
 ```sql
-SELECT id, name FROM students ORDER BY id;
+SELECT cID, cName
+FROM customer
+ORDER BY cID;
 ```
 

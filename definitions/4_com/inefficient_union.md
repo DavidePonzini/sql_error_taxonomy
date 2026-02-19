@@ -1,17 +1,32 @@
-﻿## Inefficient UNION
+## Inefficient UNION
 ### Definition
-A UNION operation can be replaced by UNION ALL without changing the result set, improving performance.
+A `UNION` operation can be replaced by `UNION ALL` without changing the result set, improving performance.
+
+### Data demand
+*(Not relevant)*
 
 ### Example
 ```sql
-SELECT name FROM students WHERE age < 18 UNION SELECT name FROM students WHERE age > 30;
+SELECT city 
+FROM customer
+WHERE city < 'M'
+UNION
+SELECT city
+FROM store
+WHERE city > 'M';
 ```
 
 ### Explaination
-The two queries retrieve names of students from disjoint age groups (younger than 18 and older than 30). Since there is no overlap between these two groups, using UNION ALL is more efficient as it does not perform the additional step of removing duplicates, which is unnecessary in this case.
+The query combines cities from the `customer` and `store` tables using `UNION`, which eliminates duplicate rows. However, the conditions in the `WHERE` clauses ensure that there will be no overlapping cities between the two sets (cities less than 'M' from `customer` and cities greater than 'M' from `store`). Therefore, there are no duplicates to eliminate, and using `UNION ALL` would yield the same result more efficiently.
 
 ### Correction
 ```sql
-SELECT name FROM students WHERE age < 18 UNION ALL SELECT name FROM students WHERE age > 30;
+SELECT city 
+FROM customer
+WHERE city < 'M'
+UNION ALL
+SELECT city
+FROM store
+WHERE city > 'M';
 ```
 
