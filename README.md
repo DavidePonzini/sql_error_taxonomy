@@ -1,10 +1,13 @@
 # SQL Error Taxonomy
 
-This repository provides a lightweight SQL error taxonomy aimed at supporting uniform error classification in educational and automated settings.
+This repository provides a SQL error taxonomy aimed at supporting uniform error classification in educational and automated settings.
 
 It is based on the taxonomy proposed by Taipalus et al. [^taipalus_errors2018], with revisions introduced in our work to address ambiguities and limitations encountered when applying the taxonomy in automated SQL error-detection pipelines. The revised taxonomy refines error definitions, clarifies labels, and improves suitability for algorithmic classification.
 
-## Top-level categories
+Definitions are grounded in **observable properties of queries**, with criteria chosen to remain suitable for **automated detection** while preserving **pedagogical interpretability**.
+No assumptions about student intent are made at this level.
+
+# Top-level categories
 
 SQL errors can be organized into four categories:
 
@@ -26,13 +29,33 @@ SQL errors can be organized into four categories:
    - *Data demand:* List all cities in which stores are located, without repetitions.  
    - Even though the query returns the correct result, using `GROUP BY` (instead of `SELECT DISTINCT`) just to remove duplicate values is both less efficient and harder to read.
 
-## Taxonomy
+# Taxonomy
 
-**Error definitions:** see [`ERROR_DEFINITIONS.md`](ERROR_DEFINITIONS.md) for detailed information on each error.
-You can also use the links in the table below.
+You can use the links in the tables below to see detailed information on each error.
 
+For each query, we will be referencing the following schema, adapted from Miedema et Al. [^miedema_identifying2022].
+Underlined attributes collectively form the primary key for each table.
 
-### Syntax errors
+| Table name | Attributes                                                   |
+| :--------- | :----------------------------------------------------------- |
+| customer   | <ins>cID</ins>, cName, street, city                          |
+| store      | <ins>sID</ins>, sName, street, city                          |
+| product    | <ins>pID</ins>, pName, suffix                                |
+| inventory  | <ins>sID</ins>, <ins>pID</ins>, date, quantity, unit_price   |
+
+## Syntax errors
+**Definition**  
+A *syntax error* occurs when a SQL query violates the syntactic or typing rules of the SQL language and **cannot be executed by the DBMS**.
+
+**Key properties**
+- The DBMS rejects the query at parse time or during static validation.
+- No result set is produced.
+- The error can be detected without knowledge of the data demand.
+- The error is independent of the database instance contents.
+
+**Pedagogical interpretation**  
+Syntax errors typically reflect difficulties with SQL grammar, clause structure, or expression formation, and often arise in early stages of learning.
+
 | Subcategory | ID  | Name
 | :---------- | :-: | :---
 | **Ambiguous database object**
@@ -81,7 +104,19 @@ You can also use the links in the table below.
 |             | 37  | [Different tuples in set operation](ERROR_DEFINITIONS.md)
 
 
-### Semantic errors
+## Semantic errors
+**Definition**  
+A *semantic error* occurs when a SQL query is syntactically valid and executable, but its evaluation is **semantically flawed regardless of the data demand**, producing a result that is always meaningless.
+
+**Key properties**
+- The query executes successfully.
+- The result set is intrinsically invalid (e.g., always empty or logically inconsistent).
+- The error can be detected without reference to the intended task.
+- The behavior holds for any possible database instance.
+
+**Pedagogical interpretation**  
+These errors often signal misconceptions about logical conditions, boolean reasoning, or the meaning of operators in SQL.
+
 | Subcategory | ID  | Name
 | :---------- | :-: | :---
 | **Inconsistent expression**
@@ -98,7 +133,19 @@ You can also use the links in the table below.
 |             | 45  | [Constant column output](ERROR_DEFINITIONS.md)
 |             | 46  | [Duplicate column output](ERROR_DEFINITIONS.md)
 
-### Logic errors
+## Logic errors
+**Definition**  
+A *logic error* occurs when a SQL query is syntactically and semantically valid, but **does not satisfy the given data demand**.
+
+**Key properties**
+- The query executes successfully.
+- A result set is produced.
+- The result does not match the expected outcome defined by the data demand.
+- Detection requires comparison with at least one correct reference query or specification.
+
+**Pedagogical interpretation**  
+Logic errors reflect misunderstandings of the problem requirements, relational reasoning, or the mapping between natural language requests and SQL constructs.
+
 | Subcategory | ID  | Name
 | :---------- | :-: | :---
 **Operator error**
@@ -157,7 +204,19 @@ You can also use the links in the table below.
 |             | 93  | [Incorrect function](ERROR_DEFINITIONS.md)
 |             | 94  | [Incorrect column as function parameter](ERROR_DEFINITIONS.md)
 
-### Complications
+## Complications
+**Definition**  
+A *complication* occurs when a SQL query **satisfies the data demand**, but does so in an **unnecessarily complex, redundant, or non-idiomatic way**.
+
+**Key properties**
+- The query returns a correct result set.
+- One or more components are redundant, superfluous, or replaceable by simpler constructs.
+- Removing or simplifying these components does not change the result.
+- Detection requires knowledge of the data demand.
+
+**Pedagogical interpretation**  
+Complications often indicate partial understanding or overgeneralization of SQL constructs, and provide opportunities for feedback focused on readability, efficiency, and idiomatic query formulation.
+
 | Subcategory | ID  | Name
 | :---------- | :-: | :---
 |             | 95  | [Unnecessary complication](ERROR_DEFINITIONS.md)
@@ -187,6 +246,14 @@ You can also use the links in the table below.
 |             | 119 | [OUTER JOIN can be replaced by INNER JOIN](ERROR_DEFINITIONS.md)
 |             | 120 | [Unused CTE](ERROR_DEFINITIONS.md)
 
-## References
+# Notes on Category Boundaries
+
+- The four top-level categories are **mutually exclusive as primary labels**, but a single query may exhibit **multiple issues**.
+- Classification prioritizes **observable query behavior** over inferred intent.
+- The distinction between *semantic* and *logic* errors hinges on whether the data demand is required for detection.
+
+# References
 
 [^taipalus_errors2018]: Toni Taipalus, Mikko Siponen, and Tero Vartiainen. 2018. *Errors and Complications in SQL Query Formulation.* ACM Trans. Comput. Educ. 18, 3, Article 15 (September 2018), 29 pages. https://doi.org/10.1145/3231712
+
+[^miedema_identifying2018]: Miedema, Daphne, Efthimia Aivaloglou, and George Fletcher. "Identifying SQL misconceptions of novices: Findings from a think-aloud study." ACM Inroads 13.1 (2022): 52-65. https://dx.doi.org/10.1145/3514214
