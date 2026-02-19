@@ -252,7 +252,6 @@ Complications often indicate partial understanding or overgeneralization of SQL 
 - The distinction between *semantic* and *logic* errors hinges on whether the data demand is required for detection.
 
 # References
-
 [^taipalus_errors2018]: Toni Taipalus, Mikko Siponen, and Tero Vartiainen. 2018. *Errors and Complications in SQL Query Formulation.* ACM Trans. Comput. Educ. 18, 3, Article 15 (September 2018), 29 pages. https://doi.org/10.1145/3231712
 
-[^miedema_identifying2018]: Miedema, Daphne, Efthimia Aivaloglou, and George Fletcher. "Identifying SQL misconceptions of novices: Findings from a think-aloud study." ACM Inroads 13.1 (2022): 52-65. https://dx.doi.org/10.1145/3514214
+[^miedema_identifying2022]: Daphne Miedema, Efthimia Aivaloglou, and George Fletcher. *Identifying SQL misconceptions of novices: Findings from a think-aloud study.* ACM Inroads 13.1 (2022): 52-65. https://dx.doi.org/10.1145/3514214
