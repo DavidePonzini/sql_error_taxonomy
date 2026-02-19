@@ -1,6 +1,6 @@
-﻿## Different tuples in set operation
+## Different tuples in set operation
 ### Definition
-Two queries combined with a set operation (UNION/INTERSECT/EXCEPT) return tuples with different cardinalities.
+Two queries combined with a set operation (`UNION`/`INTERSECT`/`EXCEPT`) return tuples with different cardinalities.
 
 ### Example
 ```sql

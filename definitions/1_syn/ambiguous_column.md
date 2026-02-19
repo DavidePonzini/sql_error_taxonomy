@@ -1,17 +1,18 @@
-﻿## Ambiguous column
+## Ambiguous column
 ### Definition
 When using multiple tables in a query, a column present in more than one table is referenced without specifying which table it belongs to.
 
 ### Example
 ```sql
-SELECT id FROM students, teachers;
+SELECT city
+FROM customer, store;
 ```
 
 ### Explaination
-Both tables contain a column named 'id'. Without specifying the table, the database cannot determine which 'id' to use.
+Both tables contain a column named `city`. Without qualifying the table, the database cannot determine which `city` column to use.
 
 ### Correction
 ```sql
-SELECT students.id FROM students, teachers;
+SELECT customer.city
+FROM customer, store;
 ```
-

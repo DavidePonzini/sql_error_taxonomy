@@ -1,10 +1,11 @@
-﻿## Confusing function with function parameter
+## Confusing function with function parameter
 ### Definition
 A function is confused with its parameter, leading to incorrect query syntax or logic.
 
 ### Example
 ```sql
-SELECT (COUNT) course FROM students;
+SELECT (COUNT) pName
+FROM customer;
 ```
 
 ### Explaination
@@ -12,6 +13,7 @@ The query incorrectly uses parentheses around the function name COUNT, which mak
 
 ### Correction
 ```sql
-SELECT COUNT(course) FROM students;
+SELECT COUNT(pName)
+FROM customer;
 ```
 

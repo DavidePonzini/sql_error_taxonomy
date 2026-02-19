@@ -1,17 +1,22 @@
-﻿## Undefined parameter
+## Undefined parameter
 ### Definition
 The query references a parameter that does not exist or is not defined. Also, placeholder parameters are used incorrectly.
 
 ### Example
 ```sql
-SELECT ? FROM students WHERE id = :param;
+SELECT ?
+FROM customer
+WHERE cID = :param;
 ```
 
 ### Explaination
-The query uses placeholder parameters instead of actual values. This is valid syntax in prepared statements, but not in regular queries.
+The query uses placeholder parameters instead of actual values.
+Even though this can be valid syntax in prepared statements, it is not in regular queries.
 
 ### Correction
 ```sql
-SELECT name FROM students WHERE id = 1;
+SELECT cName
+FROM customer
+WHERE cID = 1;
 ```
 

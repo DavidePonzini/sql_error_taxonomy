@@ -1,4 +1,4 @@
-﻿## Missing quantifier
+## Missing quantifier
 ### Definition
 A comparison is performed with a subquery that can possibly return multiple values, regardless of the data currently present in the database.
 
@@ -17,8 +17,8 @@ WHERE unit_price >= (
 ### Explaination
 The value of `unit_price` is directly compared to the result of the subquery.
 
-This works fine only if the subquery returns a single value (i.e. the `product` table contains only one entry whose name is *'Banana'*).
-However, if the table is later updated, and a new product with the same name is added, the query becomes invalid.
+This works fine only if the subquery returns a single value (i.e. the `product` table contains only one entry whose cName is *'Banana'*).
+However, if the table is later updated, and a new product with the same cName is added, the query becomes invalid.
 
 This problem can be solved by using a quantifier in the comparison (ANY/ALL).
 

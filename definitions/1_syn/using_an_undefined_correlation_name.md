@@ -1,17 +1,19 @@
-﻿## Using an undefined correlation name
+## Using an undefined correlation cName
 ### Definition
 The query references a correlation name (alias) that has not been defined.
 
 ### Example
 ```sql
-SELECT s2.name FROM students AS s;
+SELECT c2.cName
+FROM customer AS c;
 ```
 
 ### Explaination
-This query renames the students table to 's' but then tries to reference it as 's2', which is not defined.
+This query renames the customer table to `c` but then tries to reference it as `c2`, which is not defined.
 
 ### Correction
 ```sql
-SELECT s.name FROM students AS s;
+SELECT c.cName
+FROM customer AS c;
 ```
 

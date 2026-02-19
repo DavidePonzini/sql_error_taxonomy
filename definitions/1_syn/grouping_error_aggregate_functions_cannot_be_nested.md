@@ -1,10 +1,12 @@
-﻿## Grouping error: aggregate functions cannot be nested
+## Grouping error: aggregate functions cannot be nested
 ### Definition
 Aggregate functions cannot be nested within each other in a query.
 
 ### Example
 ```sql
-SELECT SUM(AVG(score)) FROM students GROUP BY class;
+SELECT SUM(AVG(age))
+FROM customer
+GROUP BY city;
 ```
 
 ### Explaination
@@ -12,6 +14,11 @@ This query attempts to nest the AVG function inside the SUM function, which is n
 
 ### Correction
 ```sql
-SELECT SUM(score) FROM (SELECT AVG(score) AS score FROM students GROUP BY class) AS avg_scores;
+SELECT SUM(age)
+FROM (
+    SELECT AVG(age) AS age
+    FROM customer
+    GROUP BY city
+) AS avg_ages;
 ```
 

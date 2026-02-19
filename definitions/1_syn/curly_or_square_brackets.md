@@ -1,17 +1,21 @@
-﻿## Curly or square brackets
+## Curly or square brackets
 ### Definition
-Curly and square brackets are used instead of parentheses, or parentheses are unmatched.
+Curly and square brackets are used instead of parentheses.
 
 ### Example
 ```sql
-SELECT * FROM students WHERE age > [(15 + 18) * 2] / (7 + 3);
+SELECT *
+FROM customer
+WHERE age > [(15 + 18) * 2] / (7 + 3);
 ```
 
 ### Explaination
-Use only parentheses () for grouping expressions in SQL, and ensure that all opening parentheses have a corresponding closing parenthesis.
+Only parentheses ( "`(`" and "`)`" ) are allowed for grouping expressions in SQL.
 
 ### Correction
 ```sql
-SELECT * FROM students WHERE age > ((15 + 18) * 2) / (7 + 3);
+SELECT *
+FROM customer
+WHERE age > ((15 + 18) * 2) / (7 + 3);
 ```
 
