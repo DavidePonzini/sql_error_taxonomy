@@ -2,6 +2,9 @@
 ### Definition
 Using `DISTINCT` removes duplicate rows from the result set, which may inadvertently exclude important data.
 
+### Data demand
+*(Not relevant, semantic errors do not depend on the data demand.)*
+
 ### Example
 ```sql
 SELECT DISTINCT cName

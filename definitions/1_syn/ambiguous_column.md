@@ -2,6 +2,9 @@
 ### Definition
 When using multiple tables in a query, a column present in more than one table is referenced without specifying which table it belongs to.
 
+### Data demand
+*(Not relevant, syntax errors do not depend on the data demand.)*
+
 ### Example
 ```sql
 SELECT city

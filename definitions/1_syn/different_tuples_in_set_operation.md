@@ -2,6 +2,9 @@
 ### Definition
 Two queries combined with a set operation (`UNION`/`INTERSECT`/`EXCEPT`) return tuples with different cardinalities.
 
+### Data demand
+*(Not relevant, syntax errors do not depend on the data demand.)*
+
 ### Example
 ```sql
 SELECT city

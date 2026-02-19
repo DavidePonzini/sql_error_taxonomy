@@ -2,6 +2,9 @@
 ### Definition
 The `IS` operator is used for comparisons on values other than `NULL` or boolean expressions.
 
+### Data demand
+*(Not relevant, syntax errors do not depend on the data demand.)*
+
 ### Example
 ```sql
 SELECT * FROM

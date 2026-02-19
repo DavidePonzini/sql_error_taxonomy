@@ -2,6 +2,9 @@
 ### Definition
 The query references a correlation name (alias) that has not been defined.
 
+### Data demand
+*(Not relevant, syntax errors do not depend on the data demand.)*
+
 ### Example
 ```sql
 SELECT c2.cName

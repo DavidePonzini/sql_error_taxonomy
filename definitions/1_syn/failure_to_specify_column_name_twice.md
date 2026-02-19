@@ -2,6 +2,9 @@
 ### Definition
 When using multiple conditions on the same column, the column name is not specified for each condition.
 
+### Data demand
+*(Not relevant, syntax errors do not depend on the data demand.)*
+
 ### Example
 ```sql
 SELECT *

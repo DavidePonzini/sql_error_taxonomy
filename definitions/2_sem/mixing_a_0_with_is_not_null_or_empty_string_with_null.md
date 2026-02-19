@@ -2,6 +2,9 @@
 ### Definition
 Using `> 0` or `= ''` to check for non-null values instead of `IS NOT NULL` or `IS NULL`.
 
+### Data demand
+*(Not relevant, semantic errors do not depend on the data demand.)*
+
 ### Example
 ```sql
 SELECT *

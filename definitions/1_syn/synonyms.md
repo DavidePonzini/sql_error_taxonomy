@@ -2,6 +2,9 @@
 ### Definition
 The query uses synonyms or alternative names for tables or columns that do not exist.
 
+### Data demand
+*(Not relevant, syntax errors do not depend on the data demand.)*
+
 ### Example
 ```sql
 SELECT *

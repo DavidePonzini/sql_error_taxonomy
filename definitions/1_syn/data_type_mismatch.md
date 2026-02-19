@@ -2,6 +2,9 @@
 ### Definition
 The query uses incompatible data types in an operation or comparison.
 
+### Data demand
+*(Not relevant, syntax errors do not depend on the data demand.)*
+
 ### Example
 ```sql
 SELECT *

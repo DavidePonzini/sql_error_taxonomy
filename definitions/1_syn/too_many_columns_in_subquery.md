@@ -2,6 +2,9 @@
 ### Definition
 A subquery returns more columns than expected in the context where it is used.
 
+### Data demand
+*(Not relevant, syntax errors do not depend on the data demand.)*
+
 ### Example
 ```sql
 SELECT *

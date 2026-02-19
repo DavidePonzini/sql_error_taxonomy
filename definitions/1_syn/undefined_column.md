@@ -2,6 +2,9 @@
 ### Definition
 The query references a column that does not exist in the specified table(s).
 
+### Data demand
+*(Not relevant, syntax errors do not depend on the data demand.)*
+
 ### Example
 ```sql
 SELECT credit_card

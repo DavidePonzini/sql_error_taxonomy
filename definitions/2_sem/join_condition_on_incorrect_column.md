@@ -2,6 +2,9 @@
 ### Definition
 A join condition is performed on columns that cannot logically match, resulting in an empty result set.
 
+### Data demand
+*(Not relevant, semantic errors do not depend on the data demand.)*
+
 ### Example
 ```sql
 SELECT *

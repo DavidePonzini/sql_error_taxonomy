@@ -2,6 +2,9 @@
 ### Definition
 The query contains multiple `WHERE` clauses, which is not allowed.
 
+### Data demand
+*(Not relevant, syntax errors do not depend on the data demand.)*
+
 ### Example
 ```sql
 SELECT *

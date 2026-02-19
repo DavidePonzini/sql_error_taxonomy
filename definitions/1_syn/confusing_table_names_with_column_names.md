@@ -2,6 +2,9 @@
 ### Definition
 A table name is used where a column name is expected, or vice versa.
 
+### Data demand
+*(Not relevant, syntax errors do not depend on the data demand.)*
+
 ### Example
 ```sql
 SELECT city.customer

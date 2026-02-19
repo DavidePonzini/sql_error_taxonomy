@@ -2,6 +2,9 @@
 ### Definition
 A clause is repeated in the query, such as multiple `WHERE` or `ORDER BY` clauses.
 
+### Data demand
+*(Not relevant, syntax errors do not depend on the data demand.)*
+
 ### Example
 ```sql
 SELECT *

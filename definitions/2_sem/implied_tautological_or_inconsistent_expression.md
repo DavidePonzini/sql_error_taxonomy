@@ -2,6 +2,9 @@
 ### Definition
 Query contains expressions that are always true, always false, or logically redundant.
 
+### Data demand
+*(Not relevant, semantic errors do not depend on the data demand.)*
+
 ### Example
 ```sql
 SELECT *

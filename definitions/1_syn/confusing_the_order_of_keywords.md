@@ -2,6 +2,9 @@
 ### Definition
 Keywords in the SQL statement are in the wrong order.
 
+### Data demand
+*(Not relevant, syntax errors do not depend on the data demand.)*
+
 ### Example
 ```sql
 FROM customer

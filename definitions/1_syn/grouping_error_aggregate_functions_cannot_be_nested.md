@@ -2,6 +2,9 @@
 ### Definition
 Aggregate functions cannot be nested within each other in a query.
 
+### Data demand
+*(Not relevant, syntax errors do not depend on the data demand.)*
+
 ### Example
 ```sql
 SELECT SUM(AVG(age))

@@ -2,6 +2,9 @@
 ### Definition
 Using nullable values in `IN`, `ANY`, or `ALL` subqueries can lead to unexpected results due to the way NULLs are handled in SQL.
 
+### Data demand
+*(Not relevant, semantic errors do not depend on the data demand.)*
+
 ### Example
 ```sql
 SELECT *

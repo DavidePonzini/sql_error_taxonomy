@@ -2,6 +2,9 @@
 ### Definition
 An aggregate function is used in a part of the query where it is not allowed, such as `WHERE` or `GROUP BY`.
 
+### Data demand
+*(Not relevant, syntax errors do not depend on the data demand.)*
+
 ### Example
 ```sql
 SELECT city

@@ -2,6 +2,9 @@
 ### Definition
 A function is confused with its parameter, leading to incorrect query syntax or logic.
 
+### Data demand
+*(Not relevant, syntax errors do not depend on the data demand.)*
+
 ### Example
 ```sql
 SELECT (COUNT) pName

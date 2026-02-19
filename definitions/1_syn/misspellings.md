@@ -2,6 +2,9 @@
 ### Definition
 The query contains misspelled table names, column names, or other identifiers.
 
+### Data demand
+*(Not relevant, syntax errors do not depend on the data demand.)*
+
 ### Example
 ```sql
 SELECT *

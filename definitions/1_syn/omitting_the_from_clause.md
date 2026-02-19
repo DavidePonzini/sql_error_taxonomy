@@ -2,6 +2,9 @@
 ### Definition
 The query is missing the `FROM` clause and does not select a constant value.
 
+### Data demand
+*(Not relevant, syntax errors do not depend on the data demand.)*
+
 ### Example
 ```sql
 SELECT cName

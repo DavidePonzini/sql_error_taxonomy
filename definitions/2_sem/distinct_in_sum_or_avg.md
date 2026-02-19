@@ -2,6 +2,9 @@
 ### Definition
 Using `DISTINCT` within `SUM` or `AVG` means that only unique values are summed or averaged, which is almost never the intended behavior.
 
+### Data demand
+*(Not relevant, semantic errors do not depend on the data demand.)*
+
 ### Example
 ```sql
 SELECT AVG(DISTINCT age)

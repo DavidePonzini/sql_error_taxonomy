@@ -2,6 +2,9 @@
 ### Definition
 The query returns many times the same values, making the results difficult to interpret.
 
+### Data demand
+*(Not relevant, semantic errors do not depend on the data demand.)*
+
 ### Example
 ```sql
 SELECT city

@@ -2,6 +2,9 @@
 ### Definition
 A comparison is performed with a subquery that can possibly return multiple values, regardless of the data currently present in the database.
 
+### Data demand
+*(Not relevant, syntax errors do not depend on the data demand.)*
+
 ### Example
 ```sql
 SELECT *

@@ -2,6 +2,9 @@
 ### Definition
 The query uses a comparison with NULL using operators like `=` or `!=` instead of `IS NULL` or `IS NOT NULL`.
 
+### Data demand
+*(Not relevant, syntax errors do not depend on the data demand.)*
+
 ### Example
 ```sql
 SELECT *

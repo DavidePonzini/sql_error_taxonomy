@@ -2,6 +2,9 @@
 ### Definition
 The query references a parameter that does not exist or is not defined. Also, placeholder parameters are used incorrectly.
 
+### Data demand
+*(Not relevant, syntax errors do not depend on the data demand.)*
+
 ### Example
 ```sql
 SELECT ?

@@ -2,6 +2,9 @@
 ### Definition
 Multiple columns in the output always contain identical values.
 
+### Data demand
+*(Not relevant, semantic errors do not depend on the data demand.)*
+
 ### Example
 ```sql
 SELECT cID, cName, cName

@@ -2,6 +2,9 @@
 ### Definition
 An invalid date or time value is used in the query.
 
+### Data demand
+*(Not relevant, syntax errors do not depend on the data demand.)*
+
 ### Example
 ```sql
 SELECT *

@@ -2,6 +2,9 @@
 ### Definition
 Character data values are not enclosed in quotes, which is required for string literals.
 
+### Data demand
+*(Not relevant, syntax errors do not depend on the data demand.)*
+
 ### Example
 ```sql
 SELECT *

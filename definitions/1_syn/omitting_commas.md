@@ -2,6 +2,9 @@
 ### Definition
 When listing multiple columns or values, commas are missing between them.
 
+### Data demand
+*(Not relevant, syntax errors do not depend on the data demand.)*
+
 ### Example
 ```sql
 SELECT cID city street

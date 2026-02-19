@@ -2,6 +2,9 @@
 ### Definition
 Each SQL keyword has a specific syntax that must be followed.
 
+### Data demand
+*(Not relevant, syntax errors do not depend on the data demand.)*
+
 ### Example
 ```sql
 SELECT *

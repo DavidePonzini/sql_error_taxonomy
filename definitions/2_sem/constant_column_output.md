@@ -2,6 +2,9 @@
 ### Definition
 A column in the output has the same constant value for all rows.
 
+### Data demand
+*(Not relevant, semantic errors do not depend on the data demand.)*
+
 ### Example
 ```sql
 SELECT cName, city

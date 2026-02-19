@@ -2,6 +2,9 @@
 ### Definition
 The query uses operators that are not part of the standard SQL syntax, such as `&&`, `||`, or `==` instead of `AND`, `OR`, or `=`.
 
+### Data demand
+*(Not relevant, syntax errors do not depend on the data demand.)*
+
 ### Example
 ```sql
 SELECT *

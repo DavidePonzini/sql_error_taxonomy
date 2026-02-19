@@ -2,6 +2,9 @@
 ### Definition
 Multiple functions with the same name exist, and the query does not specify which one to use.
 
+### Data demand
+*(Not relevant, syntax errors do not depend on the data demand.)*
+
 ### Example
 ```sql
 CREATE FUNCTION my_function(interval) RETURNS text AS $$
