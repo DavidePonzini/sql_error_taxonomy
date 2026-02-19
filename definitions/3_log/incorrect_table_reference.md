@@ -1,17 +1,22 @@
-﻿## Incorrect table reference
+## Incorrect table reference
 ### Definition
-The query refences the wrong table, leading to incorrect or unexpected results.
+The query references the wrong table, leading to incorrect or unexpected results.
+
+### Data demand
+List the cities where customers are located.
 
 ### Example
 ```sql
-SELECT name FROM teachers;
+SELECT DISTINCT city
+FROM store;
 ```
 
 ### Explaination
-This query is intended to retrieve the names of students, but it mistakenly references the teachers table instead of the students table.
+The query references the `store` table instead of the `customer` table, which is where the city information for customers is stored. As a result, it retrieves cities from the `store` table rather than from the `customer` table, which does not meet the data demand.
 
 ### Correction
 ```sql
-SELECT name FROM students;
+SELECT DISTINCT city
+FROM customer;
 ```
 

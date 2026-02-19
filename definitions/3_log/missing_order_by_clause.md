@@ -1,17 +1,22 @@
-﻿## Missing ORDER BY clause
+## Missing ORDER BY clause
 ### Definition
-Definition not available in data.json.
+An `ORDER BY` clause is missing from the query when the data demand requires the results to be sorted in a specific order.
+
+### Data demand
+List all customers in alphabetical order.
 
 ### Example
 ```sql
--- Example not available in data.json.
+SELECT *
+FROM customer;
 ```
 
 ### Explaination
-Explanation not available in data.json.
+The query does not satisfy its data demand, since it does not include an `ORDER BY` clause to sort the results in alphabetical order by customer name.
 
 ### Correction
 ```sql
--- Correction not available in data.json.
+SELECT *
+FROM customer
+ORDER BY cName;
 ```
-

@@ -1,17 +1,26 @@
-﻿## Incorrect LIMIT
+## Incorrect LIMIT
 ### Definition
-Definition not available in data.json.
+The `LIMIT` clause is used with an incorrect value.
+
+### Data demand
+List the first 3 customers ordered by their names.
 
 ### Example
 ```sql
--- Example not available in data.json.
+SELECT *
+FROM customer
+ORDER BY cName
+LIMIT 10;
 ```
 
 ### Explaination
-Explanation not available in data.json.
+The query doesn't satisfy its data demand, since it lists the first 10 customers instead of the first 3 customers.
 
 ### Correction
 ```sql
--- Correction not available in data.json.
+SELECT *
+FROM customer
+ORDER BY cName
+LIMIT 3;
 ```
 

@@ -1,17 +1,22 @@
-﻿## Missing LIMIT clause
+## Missing LIMIT clause
 ### Definition
-Definition not available in data.json.
+The `LIMIT` clause is missing from the query when the data demand requires limiting the number of rows returned in the result set.
+
+### Data demand
+List 10 customers from the database.
 
 ### Example
 ```sql
--- Example not available in data.json.
+SELECT *
+FROM customer;
 ```
 
 ### Explaination
-Explanation not available in data.json.
+The query retrieves all customers from the database, but it does not include a `LIMIT` clause to restrict the number of rows returned to 10, as required by the data demand.
 
 ### Correction
 ```sql
--- Correction not available in data.json.
+SELECT *
+FROM customer
+LIMIT 10;
 ```
-

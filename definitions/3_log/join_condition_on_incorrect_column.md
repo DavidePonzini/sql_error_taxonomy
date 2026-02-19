@@ -1,17 +1,24 @@
-﻿## Join condition on incorrect column (matches possible)
+## Join condition on incorrect column (matches possible)
 ### Definition
 A join condition uses the wrong column, leading to incorrect or unexpected results.
 
+### Data demand
+List stores along with their inventory. 
+
 ### Example
 ```sql
-SELECT students.name FROM students JOIN teachers ON students.class_id = teachers.favourite_number;
+SELECT *
+FROM store s
+JOIN inventory i ON s.sID = i.pID;
 ```
 
 ### Explaination
-This query is intended to retrieve the names of students who are associated with specific teachers. However, the join condition uses the favourite_number column from the teachers table, which is not logically related to the class_id column from the students table. This can lead to incorrect or unexpected results, as the join may match students with unrelated teachers based on arbitrary favourite numbers.
+The query attempts to join the `store` and `inventory` tables using the condition `s.sID = i.pID`. However, `sID` is the store ID and `pID` is the product ID, so this condition does not correctly relate the two tables. As a result, the query will not return the intended results of listing stores along with their inventory.
 
 ### Correction
 ```sql
-SELECT students.name FROM students JOIN teachers ON students.class_id = teachers.class_id;
+SELECT *
+FROM store s
+JOIN inventory i ON s.sID = i.sID;
 ```
 

@@ -1,17 +1,26 @@
-﻿## Missing OFFSET clause
+## Missing OFFSET clause
 ### Definition
-Definition not available in data.json.
+The `OFFSET` clause is missing from the query when the data demand requires skipping a certain number of rows before starting to return results.
+
+### Data demand
+List the first the second, third and fourth customers in alphabetical order.
 
 ### Example
 ```sql
--- Example not available in data.json.
+SELECT *
+FROM customer
+ORDER BY cName
+LIMIT 3;
 ```
 
 ### Explaination
-Explanation not available in data.json.
+The query doesn't satisfy its data demand, since it lists the first three customers instead of the second, third and fourth customers. The `OFFSET` clause is needed to skip the first customer.
 
 ### Correction
 ```sql
--- Correction not available in data.json.
+SELECT *
+FROM customer
+ORDER BY cName
+LIMIT 3
+OFFSET 1;
 ```
-

@@ -1,17 +1,24 @@
-﻿## Missing table reference
+## Missing table reference
 ### Definition
-The query refences less tables than necessary, leading to incomplete results.
+The query references fewer tables than necessary, leading to incomplete results.
+
+### Data demand
+List all store IDs that have items in inventory.
 
 ### Example
 ```sql
-SELECT students.name FROM students WHERE ...;
+SELECT sID
+FROM store;
 ```
 
 ### Explaination
-This query is intended to retrieve the names of students who are associated with specific teachers. However, it does not include a join with the teachers table, which is necessary to filter students based on their associated teachers. As a result, the query may return incomplete results or fail to apply the intended filtering criteria.
+The query only references the `store` table, which does not contain information about inventory. As a result, it fails to identify which stores have items in inventory, leading to incomplete results.
 
 ### Correction
 ```sql
-SELECT students.name FROM students, teachers WHERE ...;
+SELECT sID
+FROM
+    store
+    NATURAL JOIN inventory;
 ```
 

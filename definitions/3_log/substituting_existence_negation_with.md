@@ -1,17 +1,37 @@
-﻿## Substituting existence negation with <>
+## Substituting existence negation with <>
 ### Definition
-The query uses <> to check for non-existence instead of NOT IN or NOT EXISTS.
+The query uses `<>` to check for non-existence instead of `NOT IN` or `NOT EXISTS`.
+
+### Data demand
+List all stores that do not have any inventory items that cost 5.
 
 ### Example
 ```sql
-SELECT * FROM students WHERE id <> (SELECT student_id FROM graduates);
+SELECT *
+FROM store s
+WHERE EXISTS (
+    SELECT 1
+    FROM inventory i
+    WHERE
+        i.sID = s.sID
+        AND i.unit_price <> 5
+);
 ```
 
 ### Explaination
-This query attempts to find students who are not graduates by using the <> operator. However, this query actually returns students whose id is not equal to the single value returned by the subquery, which is not the intended behavior. To correctly find students who are not graduates, use NOT IN or NOT EXISTS.
+This query uses `<>` to check for inventory items that do not cost 5, but it does not correctly enforce the condition that there should be no inventory items that cost 5. Instead, it checks if there exists at least one inventory item that does not cost 5, which is not the intended logic. The correct approach is to use `NOT EXISTS` to ensure that there are no inventory items with a unit price of 5 for each store.
+
 
 ### Correction
 ```sql
-SELECT * FROM students WHERE id NOT IN (SELECT student_id FROM graduates);
+SELECT *
+FROM store s
+WHERE NOT EXISTS (
+    SELECT 1
+    FROM inventory i
+    WHERE
+        i.sID = s.sID
+        AND i.unit_price = 5
+);
 ```
 

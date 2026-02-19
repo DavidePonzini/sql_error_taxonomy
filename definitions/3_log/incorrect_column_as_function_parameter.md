@@ -1,17 +1,22 @@
-﻿## Incorrect column as function parameter
+## Incorrect column as function parameter
 ### Definition
 An incorrect column is used as a parameter for a function, leading to unintended results.
 
+### Data demand
+Calculate the average unit price of products in inventory.
+
 ### Example
 ```sql
-SELECT EXTRACT(month FROM birthdate) FROM students;
+SELECT AVG(quantity)
+FROM inventory;
 ```
 
 ### Explaination
-The exercise asks for the month the students graduated, but the query extracts the month of their birthdate instead.
+The query calculates the average of the `quantity` column instead of the `unit_price` column, which is not what the data demand specifies. This results in an incorrect calculation of the average unit price.
 
 ### Correction
 ```sql
-SELECT EXTRACT(month FROM graduation_date) FROM students;
+SELECT AVG(unit_price)
+FROM inventory;
 ```
 

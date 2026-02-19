@@ -1,17 +1,22 @@
-﻿## Missing DISTINCT from function parameter
+## Missing DISTINCT from function parameter
 ### Definition
-DISTINCT is missing within a function where it is required to ensure unique values are considered.
+`DISTINCT` is missing within a function where it is required to ensure repeated values are not counted multiple times.
+
+### Data demand
+Count the number of unique cities in the customer table.
 
 ### Example
 ```sql
-SELECT COUNT(supervisor) FROM students;
+SELECT COUNT(city)
+FROM customer;
 ```
 
 ### Explaination
-The exercise requires counting the number of supervisors assigned to students, counting each supervisor only once, regardless of how many students they supervise. However, the query counts all supervisor entries, including duplicates.
+The query counts all entries in the `city` column, including duplicates. If multiple customers are from the same city, they will be counted multiple times, which does not meet the data demand for counting unique cities.
 
 ### Correction
 ```sql
-SELECT COUNT(DISTINCT supervisor) FROM students;
+SELECT COUNT(DISTINCT city)
+FROM customer;
 ```
 

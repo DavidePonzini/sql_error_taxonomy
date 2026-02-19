@@ -1,17 +1,24 @@
-﻿## Expression on incorrect column
+## Expression on incorrect column
 ### Definition
-Definition not available in data.json.
+A logical expression required by the data demand is present in the query, but on the wrong column.
+
+### Data demand
+List the IDs of all Coop stores.
 
 ### Example
 ```sql
--- Example not available in data.json.
+SELECT sID
+FROM store
+WHERE street = 'Coop';
 ```
 
 ### Explaination
-Explanation not available in data.json.
+The condition `= 'Coop'` is correct, but it should be applied on the `sName` column, instead of the `street` column.
 
 ### Correction
 ```sql
--- Correction not available in data.json.
+SELECT sID
+FROM store
+WHERE sName = 'Coop';
 ```
 

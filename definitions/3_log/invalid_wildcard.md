@@ -1,17 +1,24 @@
-﻿## Invalid wildcard
+## Invalid wildcard
 ### Definition
-Wildcards are used incorrectly in pattern matching, such as using _ when % is needed, or using non-standard wildcards like *.
+Invalid wildcard characters are used in pattern matching instead of the standard SQL wildcards, such as using * instead of % or using ? instead of _.
+
+### Data demand
+List all customers whose names start with 'J' and end with 'n'.
 
 ### Example
 ```sql
-SELECT * FROM students WHERE name LIKE 'J*n';
+SELECT *
+FROM customer
+WHERE cName LIKE 'J*n';
 ```
 
 ### Explaination
-The query uses the non-standard wildcard * instead of the SQL standard wildcard %. The * character is not recognized by LIKE for pattern matching in SQL and is instead treated as a literal character.
+The query uses the `*` wildcard to match any sequence of characters, which is common in other programming languages but not in SQL. In SQL, the `%` wildcard is used for pattern matching. As a result, the query does not return any results because it is looking for names that literally contain 'J*n' instead of names that start with 'J' and end with 'n'.
 
 ### Correction
 ```sql
-SELECT * FROM students WHERE name LIKE 'J%n';
+SELECT *
+FROM customer
+WHERE cName LIKE 'J%n';
 ```
 

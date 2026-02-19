@@ -1,17 +1,24 @@
-﻿## Missing HAVING clause
+## Missing HAVING clause
 ### Definition
-Definition not available in data.json.
+A `HAVING` clause is missing from the query when the data demand requires filtering of grouped results based on an aggregate condition.
+
+### Data demand
+List the average age of customers for each city where the average age is greater than 30.
 
 ### Example
 ```sql
--- Example not available in data.json.
+SELECT city, AVG(age)
+FROM customer
+GROUP BY city;
 ```
 
 ### Explaination
-Explanation not available in data.json.
+The query calculates the average age of customers for each city but does not include a `HAVING` clause to filter the results based on the condition that the average age should be greater than 30. As a result, it returns the average age for all cities, not just those where the average age exceeds 30.
 
 ### Correction
 ```sql
--- Correction not available in data.json.
+SELECT city, AVG(age)
+FROM customer
+GROUP BY city
+HAVING AVG(age) > 30;
 ```
-

@@ -1,17 +1,22 @@
-﻿## Missing GROUP BY clause
+## Missing GROUP BY clause
 ### Definition
-Definition not available in data.json.
+A `GROUP BY` clause is missing from the query when the data demand requires aggregation of results based on one or more columns.
+
+### Data demand
+List the average age of customers for each city.
 
 ### Example
 ```sql
--- Example not available in data.json.
+SELECT AVG(age)
+FROM customer;
 ```
 
 ### Explaination
-Explanation not available in data.json.
+The query calculates the average age of all customers but does not group the results by city. As a result, it returns a single average age for all customers, not for each city.
 
 ### Correction
 ```sql
--- Correction not available in data.json.
+SELECT AVG(age)
+FROM customer
+GROUP BY city;
 ```
-

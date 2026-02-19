@@ -1,17 +1,22 @@
-﻿## Missing column from SELECT
+## Missing column from SELECT
 ### Definition
-A required column is missing from the SELECT clause.
+A required column is missing from the `SELECT` clause.
+
+### Data demand
+List the names and ages of all customers.
 
 ### Example
 ```sql
-SELECT name FROM students;
+SELECT cName
+FROM customer;
 ```
 
 ### Explaination
-The exercise requires both the names and ages of students, but the query only selects the name column, omitting the age column.
+The exercise requires both the names and ages of customer, but the query only selects the former.
 
 ### Correction
 ```sql
-SELECT name, age FROM students;
+SELECT cName, age
+FROM customer;
 ```
 

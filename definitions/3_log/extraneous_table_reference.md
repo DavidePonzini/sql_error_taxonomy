@@ -1,17 +1,22 @@
-﻿## Extraneous table reference
+## Extraneous table reference
 ### Definition
 The query references more tables than necessary, leading to incorrect or unexpected results.
 
+### Data demand
+List the names of all customers.
+
 ### Example
 ```sql
-SELECT name FROM students, teachers WHERE ...;
+SELECT cName
+FROM customer, store;
 ```
 
 ### Explaination
-This query is intended to retrieve the names of students that meet certain criteria, but it unnecessarily joins the teachers table, which is not needed for this purpose. This can lead to incorrect results if there are multiple teachers associated with a student or if there are no matching teachers.
+The query references both the `customer` and `store` tables, but the data demand only requires information from the `customer` table. The inclusion of the `store` table creates a Cartesian product, resulting in multiple rows for each customer name, which is not the intended outcome.
 
 ### Correction
 ```sql
-SELECT name FROM students WHERE ...;
+SELECT cName
+FROM customer;
 ```
 

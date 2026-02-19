@@ -1,17 +1,26 @@
-﻿## Missing expression
+## Missing expression
 ### Definition
-Definition not available in data.json.
+A logical expression required by the data demand is missing from the query.
+
+### Data demand
+List the names of all customers who are older than 18 years and live in Genoa.
 
 ### Example
 ```sql
--- Example not available in data.json.
+SELECT cName
+FROM customer
+WHERE age > 18;
 ```
 
 ### Explaination
-Explanation not available in data.json.
+The query only checks for customers older than 18 but does not filter for customers living in Genoa.
 
 ### Correction
 ```sql
--- Correction not available in data.json.
+SELECT cName
+FROM customer
+WHERE 
+    age > 18
+    AND city = 'Genoa';
 ```
 

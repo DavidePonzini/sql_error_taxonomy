@@ -1,17 +1,24 @@
-﻿## Incorrect column in ORDER BY clause
+## Incorrect column in ORDER BY clause
 ### Definition
-An incorrect column is used in the ORDER BY clause, leading to results being sorted in an unintended manner.
+An incorrect column is used in the `ORDER BY` clause, leading to results being sorted in an unintended manner.
+
+### Data demand
+List all customers ordered alphabetically by their names.
 
 ### Example
 ```sql
-SELECT name, age FROM students ORDER BY city;
+SELECT *
+FROM customer
+ORDER BY city;
 ```
 
 ### Explaination
-The exercise requires the results to be ordered by name, but the query incorrectly orders the results by city instead.
+The query orders the results by the `city` column instead of the `cName` column, which is not what the data demand specifies. This results in customers being sorted by their city rather than their names.
 
 ### Correction
 ```sql
-SELECT name, age FROM students ORDER BY name;
+SELECT *
+FROM customer
+ORDER BY cName;
 ```
 

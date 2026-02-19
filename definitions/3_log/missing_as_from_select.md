@@ -1,17 +1,22 @@
-﻿## Missing AS from SELECT
+## Missing AS from SELECT
 ### Definition
-A column presents a different name from what is required by the exercise, due to the absence of an AS alias.
+A column presents a different name from what is required by the exercise, due to the absence of an `AS` alias.
+
+### Data demand
+List the names of all customers, labeling the output column as `name`.
 
 ### Example
 ```sql
-SELECT name FROM students;
+SELECT cName
+FROM customer;
 ```
 
 ### Explaination
-The exercise requires the output column to be labeled as 'student_name', but the query does not use an AS alias to rename the column.
+The query retrieves the names of all customers, but it does not label the output column as `name`, which is required by the data demand.
 
 ### Correction
 ```sql
-SELECT name AS student_name FROM students;
+SELECT cName AS name
+FROM customer;
 ```
 

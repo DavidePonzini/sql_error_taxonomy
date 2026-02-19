@@ -1,17 +1,26 @@
-﻿## Extraneous expression
+## Extraneous expression
 ### Definition
-Definition not available in data.json.
+A logical expression not required by the data demand is present in the query.
+
+### Data demand
+List the IDs of all Coop stores.
 
 ### Example
 ```sql
--- Example not available in data.json.
+SELECT sID
+FROM store
+WHERE
+    sName = 'Coop'
+    AND city = 'Genoa';
 ```
 
 ### Explaination
-Explanation not available in data.json.
+The query lists all Coop stores located in Genoa, which is not what the data demand required. The extraneous condition `city = 'Genoa'` should be removed.
 
 ### Correction
 ```sql
--- Correction not available in data.json.
+SELECT sID
+FROM store
+WHERE sName = 'Coop';
 ```
 

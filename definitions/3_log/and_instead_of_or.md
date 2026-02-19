@@ -1,21 +1,29 @@
-﻿## AND instead of OR
+## AND instead of OR
 ### Definition
-Query uses AND where OR is needed.
+Query uses `AND` where `OR` is needed.
 
 ### Data demand
-List of students who are older that 18, as well as those have received an 'A' grade, regardless of age.
+List customers who are older that 18, as well as those who live in Genoa, regardless of their age.
 
 ### Example
 ```sql
-SELECT * FROM students WHERE age > 18 AND grade = 'A';
+SELECT *
+FROM customer
+WHERE
+    age > 18
+    AND city = 'Genoa';
 ```
 
 
 ### Explaination
-This query finds students older than 18 that have received an 'A' grade. However, this does not match the data demand. In this case, `OR` should have been used instead of `AND`.
+This query finds customers older than 18 who live in Genoa. However, this does not match the data demand. In this case, `OR` should have been used instead of `AND`.
 
 ### Correction
 ```sql
-SELECT * FROM students WHERE age > 18 OR grade = 'A';
+SELECT *
+FROM customer
+WHERE 
+    age > 18
+    OR city = 'Genoa';
 ```
 

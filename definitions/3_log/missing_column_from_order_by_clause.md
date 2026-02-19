@@ -1,17 +1,25 @@
-﻿## Missing column from ORDER BY clause
+## Missing column from ORDER BY clause
 ### Definition
-A required column is missing from the ORDER BY clause.
+A required column is missing from the `ORDER BY` clause.
+
+### Data demand
+List the names and ages of all customers, ordered by their names and then by their ages.
 
 ### Example
 ```sql
-SELECT name, age FROM students ORDER BY name;
+SELECT cName, age
+FROM customer
+ORDER BY cName;
 ```
 
 ### Explaination
-The exercise requires the results to be ordered by both name and age. However, the query only orders the results by name, omitting age from the ORDER BY clause.
+The query retrieves the names and ages of all customers but only orders the results by `cName`. 
+Customers with the same name are unsorted within their group.
 
 ### Correction
 ```sql
-SELECT name, age FROM students ORDER BY name, age;
+SELECT cName, age
+FROM customer
+ORDER BY cName, age;
 ```
 

@@ -1,17 +1,22 @@
-﻿## Extraneous column in SELECT
+## Extraneous column in SELECT
 ### Definition
-A column is included in the SELECT clause that is not expected or needed for the intended result.
+A column is included in the `SELECT` clause that is not expected or needed for the intended result.
+
+### Data demand
+List IDs and named of all customers.
 
 ### Example
 ```sql
-SELECT name, age, address FROM students;
+SELECT cID, cName, street
+FROM customer;
 ```
 
 ### Explaination
-The exercise requires only the names and ages of students, but the query also includes the address column in the SELECT clause. This adds unnecessary data to the result set.
+The data demand requires only the IDs and names of customers, but the query also includes the `street` column in the SELECT clause. This adds unnecessary data to the result set.
 
 ### Correction
 ```sql
-SELECT name, age FROM students;
+SELECT cID, cName
+FROM customer;
 ```
 

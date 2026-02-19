@@ -1,17 +1,22 @@
-﻿## DISTINCT as function parameter where not applicable
+## DISTINCT as function parameter where not applicable
 ### Definition
 DISTINCT is used within a function where it is not appropriate or necessary.
 
+### Data demand
+Count the number of customers whose age is known.
+
 ### Example
 ```sql
-SELECT COUNT(DISTINCT supervisor) FROM students;
+SELECT COUNT(DISTINCT age)
+FROM customer;
 ```
 
 ### Explaination
-The exercise expects the total number of students who have a supervisor assigned, but the DISTICT keyword causes the COUNT function to count only unique supervisors, which is not the intended behavior.
+`DISTINCT` causes `COUNT` to count unique ages only. Multiple customers with the same age are counted as one.
 
 ### Correction
 ```sql
-SELECT COUNT(supervisor) FROM students;
+SELECT COUNT(age)
+FROM customer;
 ```
 
