@@ -221,7 +221,7 @@ Complications often indicate partial understanding or overgeneralization of SQL 
 | :---------- | :-: | :---
 |             | 95  | [Unnecessary complication](definitions/4_com/unnecessary_complication.md)
 |             | 96  | [Unnecessary DISTINCT in SELECT clause](definitions/4_com/unnecessary_distinct_in_select_clause.md)
-|             | 97  | [Table reference can be omitted](definitions/4_com/table_reference_can_be_omitted.md)
+|             | 97  | [Unnecessary table reference](definitions/4_com/unnecessary_table_reference.md)
 |             | 98  | [Unused correlation name](definitions/4_com/unused_correlation_name.md)
 |             | 99  | [Tables have the same data](definitions/4_com/tables_have_the_same_data.md)
 |             | 100 | [Correlation name identical to table name](definitions/4_com/correlation_name_identical_to_table_name.md)

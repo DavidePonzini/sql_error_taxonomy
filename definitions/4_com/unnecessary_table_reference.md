@@ -1,4 +1,4 @@
-## Table reference can be omitted
+## Unnecessary Table Reference
 ### Definition
 A table is joined just to access a value which is already available as a foreign key.
 
