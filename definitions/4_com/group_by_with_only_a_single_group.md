@@ -18,6 +18,8 @@ The query groups customers by city, but the `WHERE` clause filters the results t
 
 ### Correction
 ```sql
-SELECT AVG(age) FROM customer WHERE city = 'Genoa';
+SELECT AVG(age)
+FROM customer
+WHERE city = 'Genoa';
 ```
 
