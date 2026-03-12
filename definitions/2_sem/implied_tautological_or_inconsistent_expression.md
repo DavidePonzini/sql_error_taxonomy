@@ -24,6 +24,6 @@ Simplifying the query to remove these redundancies will improve clarity and perf
 ```sql
 SELECT *
 FROM customer
-WHERE age > 10;
+WHERE age > 5;
 ```
 
