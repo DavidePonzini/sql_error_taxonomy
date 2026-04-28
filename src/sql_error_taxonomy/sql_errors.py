@@ -1,5 +1,6 @@
 from enum import IntEnum
 
+VERSION: int = 1
 
 class SqlErrors(IntEnum):
     '''Enumeration of SQL error types with unique identifiers.'''

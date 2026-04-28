@@ -1,5 +1,5 @@
 '''Taxonomy of common SQL errors'''
 
 # Public API
-from .sql_errors import SqlErrors
+from .sql_errors import SqlErrors, VERSION
 
