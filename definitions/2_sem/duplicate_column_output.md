@@ -11,7 +11,7 @@ SELECT cID, cName, cName
 FROM customer;
 ```
 
-### Explaination
+### Explanation
 The query selects the `cName` column twice, resulting in duplicate data in the output. This redundancy can confuse users and make it harder to interpret the results.
 
 ### Correction

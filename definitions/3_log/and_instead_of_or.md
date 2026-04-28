@@ -15,7 +15,7 @@ WHERE
 ```
 
 
-### Explaination
+### Explanation
 This query finds customers older than 18 who live in Genoa. However, this does not match the data demand. In this case, `OR` should have been used instead of `AND`.
 
 ### Correction

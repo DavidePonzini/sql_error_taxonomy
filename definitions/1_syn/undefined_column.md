@@ -11,7 +11,7 @@ SELECT credit_card
 FROM customer;
 ```
 
-### Explaination
+### Explanation
 The table customer does not contain a column named `credit_card`.
 
 ### Correction

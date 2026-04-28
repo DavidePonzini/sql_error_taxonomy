@@ -12,7 +12,7 @@ FROM customer
 WHERE cName = John;
 ```
 
-### Explaination
+### Explanation
 Character data values must be enclosed in single quotes (`'`) to be recognized as string literals.
 
 ### Correction

@@ -12,7 +12,7 @@ FROM inventory i
 JOIN product p ON i.pID = p.pID;
 ```
 
-### Explaination
+### Explanation
 In this query, the `product` table is joined to access the `pID` column, which is already available in the `inventory` table as a foreign key. The join is unnecessary and can be omitted without affecting the result of the query.
 
 ### Correction

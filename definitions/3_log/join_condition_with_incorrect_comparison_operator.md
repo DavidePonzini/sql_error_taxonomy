@@ -12,7 +12,7 @@ FROM customer c1
 JOIN customer c2 ON c1.city <> c2.city;
 ```
 
-### Explaination
+### Explanation
 The query attempts to find pairs of customers who live in the same city, but it uses the `<>` operator, which means "not equal". As a result, it retrieves pairs of customers who live in different cities instead of those who live in the same city.
 
 ### Correction

@@ -11,7 +11,7 @@ SELECT AVG(DISTINCT age)
 FROM customer;
 ```
 
-### Explaination
+### Explanation
 This query first considers all the unique customer ages (each value is counted only once) and then calculates the average of those unique ages.
 If there are 200 customer aged 20 and 1 customer aged 30, the average will be `(20 + 30) / 2 = 25`, which does not accurately reflect the average age of all customers.
 

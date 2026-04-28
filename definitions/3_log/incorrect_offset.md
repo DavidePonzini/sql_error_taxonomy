@@ -13,7 +13,7 @@ ORDER BY cName
 OFFSET 10;
 ```
 
-### Explaination
+### Explanation
 The query uses an incorrect offset value of 10, which skips more customers than intended. The data demand requires skipping only the first 5 customers.
 
 ### Correction

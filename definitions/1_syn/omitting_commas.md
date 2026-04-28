@@ -11,7 +11,7 @@ SELECT cID city street
 FROM customer;
 ```
 
-### Explaination
+### Explanation
 This query is missing commas between the column names in the `SELECT` clause. Ensure that each column name is separated by a comma.
 
 ### Correction

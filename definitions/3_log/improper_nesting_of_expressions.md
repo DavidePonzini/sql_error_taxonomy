@@ -12,7 +12,7 @@ FROM customer
 WHERE age + 5 * 2 > 30;
 ```
 
-### Explaination
+### Explanation
 In this query, the multiplication operator has a higher precedence than the addition operator. As a result, `5 * 2` is evaluated first, giving 10, and then `age + 10` is evaluated. This is not the intended calculation. The correct evaluation should be `(age + 5) * 2`, which requires proper nesting with parentheses.
 
 ### Correction

@@ -12,7 +12,7 @@ FROM customer
 ORDER BY cID;
 ```
 
-### Explaination
+### Explanation
 The exercise requires the results to be ordered by `cName` in descending order, but the query sorts the results in ascending order instead.
 
 ### Correction

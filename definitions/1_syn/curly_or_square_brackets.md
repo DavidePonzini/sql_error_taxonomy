@@ -12,7 +12,7 @@ FROM customer
 WHERE age > [(15 + 18) * 2] / (7 + 3);
 ```
 
-### Explaination
+### Explanation
 Only parentheses ( "`(`" and "`)`" ) are allowed for grouping expressions in SQL.
 
 ### Correction

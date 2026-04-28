@@ -14,7 +14,7 @@ WHERE age < 30
 GROUP BY city;
 ```
 
-### Explaination
+### Explanation
 This query answers the following data demand: *List the average age of customers for each city. Consider only customers younger than 30.*
 
 To correctly satisfy the data demand, the condition `age < 30` must be moved to the `HAVING` clause, since it must apply on the grouping result instead of individual rows.

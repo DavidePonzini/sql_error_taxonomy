@@ -18,7 +18,7 @@ $$ LANGUAGE sql;
 SELECT my_function(NULL);
 ```
 
-### Explaination
+### Explanation
 There are two functions named `my_function`, one that takes an interval and another that takes a time. The query does not specify which function to use, leading to ambiguity.
 
 ### Correction

@@ -13,7 +13,7 @@ FROM
     JOIN customer b ON a.cID = b.cID;
 ```
 
-### Explaination
+### Explanation
 The query joins the customer table with itself on the `cID` column, which is a primary key. Since each `cID` is unique, the join will always pair each customer with themselves, resulting in identical data from both tables. This redundancy adds unnecessary complexity without any benefit.
 
 ### Correction

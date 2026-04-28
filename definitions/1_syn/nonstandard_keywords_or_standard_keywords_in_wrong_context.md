@@ -12,7 +12,7 @@ FROM customer
 SORT BY cName;
 ```
 
-### Explaination
+### Explanation
 The correct keyword for sorting results in SQL is `ORDER BY`, not `SORT BY`.
 
 ### Correction

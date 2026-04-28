@@ -16,7 +16,7 @@ SELECT cName
 FROM customer;
 ```
 
-### Explaination
+### Explanation
 The CTE named `cte` is defined but never used in the main query. This adds unnecessary complexity to the query without providing any benefit.
 
 ### Correction

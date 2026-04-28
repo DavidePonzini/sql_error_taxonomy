@@ -18,7 +18,7 @@ WHERE EXISTS (
 );
 ```
 
-### Explaination
+### Explanation
 This query uses `<>` to check for inventory items that do not cost 5, but it does not correctly enforce the condition that there should be no inventory items that cost 5. Instead, it checks if there exists at least one inventory item that does not cost 5, which is not the intended logic. The correct approach is to use `NOT EXISTS` to ensure that there are no inventory items with a unit price of 5 for each store.
 
 

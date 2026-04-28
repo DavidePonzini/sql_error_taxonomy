@@ -11,7 +11,7 @@ SELECT *
 FROM costumer;
 ```
 
-### Explaination
+### Explanation
 The table `costumer` does not exist in the database. It is a misspelling of `customer`.
 
 ### Correction

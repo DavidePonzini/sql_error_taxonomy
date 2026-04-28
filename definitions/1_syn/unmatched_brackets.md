@@ -12,7 +12,7 @@ FROM customer
 WHERE cID > ((15 + 18) * 2) / (7 + 3;
 ```
 
-### Explaination
+### Explanation
 All opening parentheses must have a corresponding closing parenthesis.
 
 ### Correction

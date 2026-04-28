@@ -11,7 +11,7 @@ SELECT cName
 FROM customer;
 ```
 
-### Explaination
+### Explanation
 The query retrieves the names of all customers, but it does not label the output column as `name`, which is required by the data demand.
 
 ### Correction

@@ -12,7 +12,7 @@ FROM customer
 GROUP BY cID;
 ```
 
-### Explaination
+### Explanation
 The query groups customers by their unique identifier `cID`, which means that each group will contain only one customer. Since there is only one row in each group, the `GROUP BY` clause does not serve any purpose, and the same result can be achieved without grouping.
 
 ### Correction

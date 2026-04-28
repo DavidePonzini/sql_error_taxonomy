@@ -17,7 +17,7 @@ WHERE unit_price >= (
 );
 ```
 
-### Explaination
+### Explanation
 The value of `unit_price` is directly compared to the result of the subquery.
 
 This works fine only if the subquery returns a single value (i.e. the `product` table contains only one entry whose cName is *'Banana'*).

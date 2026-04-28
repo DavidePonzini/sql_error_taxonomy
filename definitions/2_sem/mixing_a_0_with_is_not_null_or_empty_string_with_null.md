@@ -12,7 +12,7 @@ FROM customer
 WHERE street = '';
 ```
 
-### Explaination
+### Explanation
 This query erroneously attempts to find customers for whom we don't know in which street they live, by checking for an empty string in the `street` column.
 However, this query actually selects customers who live in a street named `''` *(empty string)*.
 

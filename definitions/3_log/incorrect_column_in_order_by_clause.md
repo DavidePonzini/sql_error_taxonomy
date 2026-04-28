@@ -12,7 +12,7 @@ FROM customer
 ORDER BY city;
 ```
 
-### Explaination
+### Explanation
 The query orders the results by the `city` column instead of the `cName` column, which is not what the data demand specifies. This results in customers being sorted by their city rather than their names.
 
 ### Correction

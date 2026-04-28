@@ -13,7 +13,7 @@ FROM
     LEFT OUTER JOIN store s ON s.city = c.city AND s.sName = 'Coop';
 ```
 
-### Explaination
+### Explanation
 The condition `s.sName = 'Coop'` is applied in the `ON` clause and affects how rows match on the right side. If a store's name does not satisfy the condition, the row can still appear with `NULL` values, which is not the intended behavior. To filter rows, the condition should be placed in the `WHERE` clause.
 
 ### Correction

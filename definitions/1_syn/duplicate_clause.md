@@ -13,7 +13,7 @@ ORDER BY cName
 ORDER BY cID;
 ```
 
-### Explaination
+### Explanation
 This query is invalid because it contains two `ORDER BY` clauses. Each clause should only appear once in a query.
 
 ### Correction

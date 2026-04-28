@@ -12,7 +12,7 @@ FROM customer
 GROUP BY city, street;
 ```
 
-### Explaination
+### Explanation
 The query groups customers by `city` and `street`, but it does not perform any aggregation. Since all `GROUP BY` columns are also in the `SELECT` clause without any aggregate functions, the same result can be achieved using `DISTINCT`, which is simpler and more efficient in this case.
 
 ### Correction

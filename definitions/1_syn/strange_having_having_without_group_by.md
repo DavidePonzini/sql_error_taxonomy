@@ -11,7 +11,7 @@ SELECT *
 FROM customer HAVING AVG(age) > 18;
 ```
 
-### Explaination
+### Explanation
 The `HAVING` clause is used to filter grouped results and should always be used in conjunction with a `GROUP BY` clause.
 
 ### Correction

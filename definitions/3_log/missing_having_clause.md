@@ -12,7 +12,7 @@ FROM customer
 GROUP BY city;
 ```
 
-### Explaination
+### Explanation
 The query calculates the average age of customers for each city but does not include a `HAVING` clause to filter the results based on the condition that the average age should be greater than 30. As a result, it returns the average age for all cities, not just those where the average age exceeds 30.
 
 ### Correction

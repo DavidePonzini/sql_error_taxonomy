@@ -11,7 +11,7 @@ SELECT sID
 FROM store;
 ```
 
-### Explaination
+### Explanation
 The query only references the `store` table, which does not contain information about inventory. As a result, it fails to identify which stores have items in inventory, leading to incomplete results.
 
 ### Correction

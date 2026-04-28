@@ -11,7 +11,7 @@ SELECT COUNT(DISTINCT age)
 FROM customer;
 ```
 
-### Explaination
+### Explanation
 `DISTINCT` causes `COUNT` to count unique ages only. Multiple customers with the same age are counted as one.
 
 ### Correction

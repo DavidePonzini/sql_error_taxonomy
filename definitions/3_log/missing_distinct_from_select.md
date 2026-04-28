@@ -11,7 +11,7 @@ SELECT city
 FROM customer;
 ```
 
-### Explaination
+### Explanation
 The query retrieves the cities of all customers, but it does not use `DISTINCT`, which means that if multiple customers live in the same city, that city will appear multiple times in the result set. This does not meet the data demand for listing unique cities.
 
 ### Correction

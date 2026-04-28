@@ -12,7 +12,7 @@ FROM customer c, store s
 WHERE c.city = 's.city';
 ```
 
-### Explaination
+### Explanation
 In this query, the condition `c.city = 's.city'` compares the `city` column of the `customer` table to the string literal `'s.city'`, which is not correct.
 To compare the `city` column of both tables, the quotes around `s.city` must be removed.
 

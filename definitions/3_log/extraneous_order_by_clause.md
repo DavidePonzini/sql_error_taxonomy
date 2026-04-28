@@ -12,7 +12,7 @@ FROM customer
 ORDER BY cName;
 ```
 
-### Explaination
+### Explanation
 The data demand does not specify any ordering for the results, so including an `ORDER BY` clause is unnecessary and adds complexity to the query.
 
 ### Correction

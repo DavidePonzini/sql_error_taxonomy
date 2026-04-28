@@ -11,7 +11,7 @@ SELECT cName
 FROM customer;
 ```
 
-### Explaination
+### Explanation
 The exercise requires both the names and ages of customer, but the query only selects the former.
 
 ### Correction

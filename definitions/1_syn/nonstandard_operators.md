@@ -14,7 +14,7 @@ WHERE
     && city == 'A';
 ```
 
-### Explaination
+### Explanation
 The operators `==` and `&&`, although common in programming languages, are not valid in SQL. Use `=` and `AND` instead.
 
 ### Correction

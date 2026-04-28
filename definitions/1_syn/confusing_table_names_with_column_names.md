@@ -11,7 +11,7 @@ SELECT city.customer
 FROM customer;
 ```
 
-### Explaination
+### Explanation
 This query tries to access a column called `customer` from the `city` table, which does not exist. The correct syntax is to specify the table name followed by the column name.
 
 ### Correction

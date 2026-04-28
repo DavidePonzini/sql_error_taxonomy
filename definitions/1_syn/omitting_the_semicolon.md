@@ -11,7 +11,7 @@ SELECT *
 FROM customer
 ```
 
-### Explaination
+### Explanation
 SQL standard requires each statement to end with a semicolon (`;`). Make sure to include it at the end of your queries.
 
 ### Correction

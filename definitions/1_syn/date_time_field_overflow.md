@@ -12,7 +12,7 @@ FROM events
 WHERE date = '2024-02-33';
 ```
 
-### Explaination
+### Explanation
 The date '2024-02-33' is invalid because a month cannot have 33 days.
 
 ### Correction

@@ -11,7 +11,7 @@ SELECT cName
 FROM customer;
 ```
 
-### Explaination
+### Explanation
 The query does not satisfy its data demand, since it does not include a `WHERE` clause to filter the results based on the specified conditions of age and city. As a result, it returns the names of all customers, regardless of their age or city of residence, which is not what the data demand specifies.
 
 ### Correction

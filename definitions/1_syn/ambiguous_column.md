@@ -11,7 +11,7 @@ SELECT city
 FROM customer, store;
 ```
 
-### Explaination
+### Explanation
 Both tables contain a column named `city`. Without qualifying the table, the database cannot determine which `city` column to use.
 
 ### Correction

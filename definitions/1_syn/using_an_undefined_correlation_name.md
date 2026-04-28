@@ -11,7 +11,7 @@ SELECT c2.cName
 FROM customer AS c;
 ```
 
-### Explaination
+### Explanation
 This query renames the customer table to `c` but then tries to reference it as `c2`, which is not defined.
 
 ### Correction

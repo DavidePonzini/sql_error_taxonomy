@@ -14,7 +14,7 @@ WHERE
     OR city = 'Genoa';
 ```
 
-### Explaination
+### Explanation
 This query finds customers who are older than 18, as well as those who live in Genoa, regardless of their age.
 However, this does not match the data demand. In this case, `AND` should have been used instead of `OR`.
 

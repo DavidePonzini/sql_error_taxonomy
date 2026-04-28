@@ -12,7 +12,7 @@ FROM customer
 WHERE cID = :param;
 ```
 
-### Explaination
+### Explanation
 The query uses placeholder parameters instead of actual values.
 Even though this can be valid syntax in prepared statements, it is not in regular queries.
 

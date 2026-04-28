@@ -11,7 +11,7 @@ SELECT (COUNT) pName
 FROM customer;
 ```
 
-### Explaination
+### Explanation
 The query incorrectly uses parentheses around the function name COUNT, which makes it look like a parameter rather than a function call. The correct syntax is to use COUNT without parentheses around it.
 
 ### Correction

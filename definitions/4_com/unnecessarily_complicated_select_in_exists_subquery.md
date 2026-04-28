@@ -16,7 +16,7 @@ WHERE EXISTS (
 );
 ```
 
-### Explaination
+### Explanation
 The `EXISTS` subquery is intended to find customers who have the same name as a store. However, the `SELECT` clause returns multiple store columns, which is unnecessary because `EXISTS` only checks whether at least one row is returned.
 
 ### Correction

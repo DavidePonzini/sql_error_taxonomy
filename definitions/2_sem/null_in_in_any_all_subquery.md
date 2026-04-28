@@ -15,7 +15,7 @@ WHERE city IN (
 );
 ```
 
-### Explaination
+### Explanation
 This query attempts to find customers whose city appears in the `store` table.
 However, if the subquery returns `NULL` values, the `IN` condition can evaluate to `UNKNOWN`, causing matching rows to be excluded unexpectedly.
 

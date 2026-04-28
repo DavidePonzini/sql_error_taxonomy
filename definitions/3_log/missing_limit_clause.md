@@ -11,7 +11,7 @@ SELECT *
 FROM customer;
 ```
 
-### Explaination
+### Explanation
 The query retrieves all customers from the database, but it does not include a `LIMIT` clause to restrict the number of rows returned to 10, as required by the data demand.
 
 ### Correction

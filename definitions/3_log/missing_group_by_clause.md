@@ -11,7 +11,7 @@ SELECT AVG(age)
 FROM customer;
 ```
 
-### Explaination
+### Explanation
 The query calculates the average age of all customers but does not group the results by city. As a result, it returns a single average age for all customers, not for each city.
 
 ### Correction

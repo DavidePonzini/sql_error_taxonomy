@@ -11,7 +11,7 @@ SELECT CAPSLOCK(cName)
 FROM customer;
 ```
 
-### Explaination
+### Explanation
 The function `CAPSLOCK` does not exist in the database.
 
 ### Correction

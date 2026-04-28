@@ -11,7 +11,7 @@ SELECT *
 FROM clients;
 ```
 
-### Explaination
+### Explanation
 The table `clients` does not exist in this schema. It is used as a synonym for `customer`, which is the correct table name.
 
 ### Correction

@@ -12,7 +12,7 @@ FROM customer
 WHERE age = NULL;
 ```
 
-### Explaination
+### Explanation
 When checking for NULL values, use `IS NULL` or `IS NOT NULL` instead of standard comparison operators.
 
 ### Correction

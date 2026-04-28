@@ -11,7 +11,7 @@ SELECT cName
 FROM customer AS c;
 ```
 
-### Explaination
+### Explanation
 The query defines a correlation name `c` for the `customer` table but does not use it anywhere in the query. This adds unnecessary complexity without any benefit.
 
 ### Correction

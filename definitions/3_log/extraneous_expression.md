@@ -14,7 +14,7 @@ WHERE
     AND city = 'Genoa';
 ```
 
-### Explaination
+### Explanation
 The query lists all Coop stores located in Genoa, which is not what the data demand required. The extraneous condition `city = 'Genoa'` should be removed.
 
 ### Correction

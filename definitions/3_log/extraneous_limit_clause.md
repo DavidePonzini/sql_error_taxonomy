@@ -12,7 +12,7 @@ FROM customer
 LIMIT 10;
 ```
 
-### Explaination
+### Explanation
 The query doesn't satisfy its data demand, since it lists only 10 customers instead of all those present in the database.
 
 ### Correction

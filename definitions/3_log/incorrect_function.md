@@ -10,7 +10,7 @@ Calculate the average age of customers.
 SELECT SUM(age) FROM customer;
 ```
 
-### Explaination
+### Explanation
 The exercise requires calculating the average age of customers, but the query uses the `SUM` function instead of `AVG`, resulting in the total age rather than the average age.
 
 ### Correction

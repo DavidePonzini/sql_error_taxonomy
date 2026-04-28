@@ -12,7 +12,7 @@ WHERE city = 'Genoa'
 FROM customer;
 ```
 
-### Explaination
+### Explanation
 The `city` column does not provide any useful information because it has the same value (*'Genoa'*) for all customer in the result set. This redundancy can clutter the output and make it harder to focus on relevant data.
 
 ### Correction

@@ -16,7 +16,7 @@ WHERE
     OR age = 9 * (12 - 2);
 ```
 
-### Explaination
+### Explanation
 The exercise requires selecting customer at least 18 years old. However, the query uses unnecessary arithmetic operations to express the age condition, making it more complicated than needed.
 
 ### Correction

@@ -10,7 +10,7 @@ GROUP BY age
 HAVING age IS NOT NULL;
 ```
 
-### Explaination
+### Explanation
 The HAVING clause is used to filter groups based on aggregate conditions. However, the condition `age IS NOT NULL` does not depend on aggregation and can be applied before grouping, which is more efficient.
 
 ### Correction

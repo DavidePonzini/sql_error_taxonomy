@@ -14,7 +14,7 @@ LIMIT 3
 OFFSET 1;
 ```
 
-### Explaination
+### Explanation
 The query doesn't satisfy its data demand, since it lists customers the second, third and fourth customers, instead of the first three.
 
 ### Correction

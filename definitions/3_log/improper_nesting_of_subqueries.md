@@ -22,7 +22,7 @@ WHERE NOT EXISTS (
 );
 ```
 
-### Explaination
+### Explanation
 This query is intended to enforce two separate conditions: the store has inventory rows, and none of those rows refers to a product with suffix `XL`. Nesting `EXISTS` inside `NOT EXISTS` leads to selecting stores that do not have any inventory rows at all, which is not the intended outcome. The correct approach is to use two separate `EXISTS` conditions at the same level.
 
 ### Correction

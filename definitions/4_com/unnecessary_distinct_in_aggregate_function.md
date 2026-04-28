@@ -11,7 +11,7 @@ SELECT COUNT(DISTINCT cID)
 FROM customer;
 ```
 
-### Explaination
+### Explanation
 The `cID` column is a primary key, meaning each value is unique. Therefore, using `DISTINCT` within the `COUNT` function doesn't change the result, as there cannot be any duplicate ids to count.
 
 ### Correction

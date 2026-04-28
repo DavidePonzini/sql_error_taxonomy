@@ -12,7 +12,7 @@ FROM customer
 WHERE age > 18 AND < 25;
 ```
 
-### Explaination
+### Explanation
 Each condition in the WHERE clause must explicitly specify the column cName it applies to.
 
 ### Correction

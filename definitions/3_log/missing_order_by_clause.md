@@ -11,7 +11,7 @@ SELECT *
 FROM customer;
 ```
 
-### Explaination
+### Explanation
 The query does not satisfy its data demand, since it does not include an `ORDER BY` clause to sort the results in alphabetical order by customer name.
 
 ### Correction

@@ -13,7 +13,7 @@ GROUP BY city
 HAVING AVG(age) > 30;
 ```
 
-### Explaination
+### Explanation
 The query uses a `HAVING` clause to filter groups of customers based on their average age. However, the data demand is to list the average age of all customers, not to filter groups. The `HAVING` clause is extraneous in this context.
 
 ### Correction

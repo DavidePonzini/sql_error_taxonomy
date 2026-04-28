@@ -12,7 +12,7 @@ FROM customer
 WHERE age > 18;
 ```
 
-### Explaination
+### Explanation
 The query only checks for customers older than 18 but does not filter for customers living in Genoa.
 
 ### Correction

@@ -12,7 +12,7 @@ FROM customer
 WHERE age < 18;
 ```
 
-### Explaination
+### Explanation
 The query uses the `<` operator instead of `>`, which results in listing customers who are younger than 18 instead of those who are older.
 
 ### Correction

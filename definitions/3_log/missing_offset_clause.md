@@ -13,7 +13,7 @@ ORDER BY cName
 LIMIT 3;
 ```
 
-### Explaination
+### Explanation
 The query doesn't satisfy its data demand, since it lists the first three customers instead of the second, third and fourth customers. The `OFFSET` clause is needed to skip the first customer.
 
 ### Correction

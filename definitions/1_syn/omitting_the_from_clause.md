@@ -11,7 +11,7 @@ SELECT cName
 WHERE age > 18;
 ```
 
-### Explaination
+### Explanation
 The `FROM` clause is required in a SELECT statement to specify the table from which to retrieve data.
 
 ### Correction

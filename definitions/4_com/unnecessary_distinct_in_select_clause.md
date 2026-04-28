@@ -11,7 +11,7 @@ SELECT DISTINCT cID, cName
 FROM customer;
 ```
 
-### Explaination
+### Explanation
 The `cID` column is a primary key, meaning each value is unique. Therefore, using `DISTINCT` is redundant since there cannot be any duplicate rows in the result set.
 
 ### Correction

@@ -12,7 +12,7 @@ FROM customer
 GROUP BY city;
 ```
 
-### Explaination
+### Explanation
 The query groups customers by city and calculates the average age for each city. However, the data demand is to list the average age of all customers, not grouped by city.
 
 ### Correction

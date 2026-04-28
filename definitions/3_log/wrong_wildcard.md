@@ -12,7 +12,7 @@ FROM customer
 WHERE cName LIKE 'J%n';
 ```
 
-### Explaination
+### Explanation
 This query uses the `%` wildcard, which matches any sequence of characters (including zero characters), instead of the `_` wildcard, which matches exactly one character. As a result, this query will return customers whose names start with 'J' and end with 'n', regardless of how many characters are in between, which does not satisfy the data demand.
 
 ### Correction

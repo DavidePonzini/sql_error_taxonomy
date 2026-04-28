@@ -12,7 +12,7 @@ FROM customer
 WHERE AVG(age) > 18;
 ```
 
-### Explaination
+### Explanation
 Aggregate functions can only be used in the `SELECT` clause, or the `HAVING` clause when grouping results. This query is attempting to use `AVG` in the `WHERE` clause, which is not allowed.
 
 ### Correction

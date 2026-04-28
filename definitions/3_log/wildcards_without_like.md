@@ -12,7 +12,7 @@ FROM customer
 WHERE cName = 'J%n';
 ```
 
-### Explaination
+### Explanation
 This query selects all customer whose name is exactly `J%n`, including the percent sign, rather than matching names that start with 'J' and end with 'n'.
 
 ### Correction

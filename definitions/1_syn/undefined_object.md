@@ -11,7 +11,7 @@ SELECT *
 FROM cats;
 ```
 
-### Explaination
+### Explanation
 The table `cats` does not exist in the database.
 
 ### Correction

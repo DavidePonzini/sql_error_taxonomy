@@ -16,7 +16,7 @@ WHERE sID IN (
 );
 ```
 
-### Explaination
+### Explanation
 The subquery in the WHERE clause must return exactly one column to compare with `inventory.sID`. Returning all store columns causes a column-count mismatch.
 
 ### Correction

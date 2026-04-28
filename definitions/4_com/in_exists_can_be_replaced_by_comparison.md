@@ -12,7 +12,7 @@ FROM customer
 WHERE cID IN (SELECT cID FROM customer WHERE age < 18);
 ```
 
-### Explaination
+### Explanation
 The query is intended to find customers who are younger than 18. However, it uses a subquery with `IN`, which can be simplified to a direct comparison. Since `cID` is a unique identifier, we can directly compare the age without needing a subquery.
 
 ### Correction

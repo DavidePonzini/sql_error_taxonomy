@@ -11,7 +11,7 @@ SELECT cID, cName, street
 FROM customer;
 ```
 
-### Explaination
+### Explanation
 The data demand requires only the IDs and names of customers, but the query also includes the `street` column in the SELECT clause. This adds unnecessary data to the result set.
 
 ### Correction

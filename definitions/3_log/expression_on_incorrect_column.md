@@ -12,7 +12,7 @@ FROM store
 WHERE street = 'Coop';
 ```
 
-### Explaination
+### Explanation
 The condition `= 'Coop'` is correct, but it should be applied on the `sName` column, instead of the `street` column.
 
 ### Correction

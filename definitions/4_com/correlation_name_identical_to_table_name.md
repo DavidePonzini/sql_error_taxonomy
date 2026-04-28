@@ -11,7 +11,7 @@ SELECT *
 FROM customer AS customer;
 ```
 
-### Explaination
+### Explanation
 The query defines a correlation name (alias) `customer` for the `customer` table, which is identical to the original table name. This redundancy adds unnecessary complexity without any benefit.
 
 ### Correction

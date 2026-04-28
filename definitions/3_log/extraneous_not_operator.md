@@ -14,7 +14,7 @@ WHERE
     AND NOT city = 'Genoa';
 ```
 
-### Explaination
+### Explanation
 This query is intended to find customers who are older than 18 and live in Genoa. However, the `NOT` operator negates the city condition, resulting in customers who are older than 18 but do not live in Genoa.
 
 ### Correction

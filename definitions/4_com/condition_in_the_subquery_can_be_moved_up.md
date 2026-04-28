@@ -18,7 +18,7 @@ WHERE EXISTS (
     );
 ```
 
-### Explaination
+### Explanation
 The condition `c.age > 18` in the subquery only references the outer query's table `customer`. Therefore, it can be moved to the outer `WHERE` clause, which can improve query readability and potentially performance.
 
 ### Correction

@@ -11,7 +11,7 @@ FROM customer
 SELECT cName;
 ```
 
-### Explaination
+### Explanation
 Ensure that SQL keywords are in the correct order: `SELECT`, `FROM`, `WHERE`, `GROUP BY`, `HAVING`, `ORDER BY`, `LIMIT`, `OFFSET`.
 
 ### Correction

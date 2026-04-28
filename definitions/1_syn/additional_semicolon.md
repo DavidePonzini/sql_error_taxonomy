@@ -11,7 +11,7 @@ SELECT *
 FROM customer;;
 ```
 
-### Explaination
+### Explanation
 Ensure that there is only one semicolon at the end of the SQL statement.
 
 ### Correction

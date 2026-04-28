@@ -14,7 +14,7 @@ SELECT city, street
 FROM store;
 ```
 
-### Explaination
+### Explanation
 The former SELECT returns a single column (`city`), while the latter returns two columns (`city` and `street`).
 Set operations require both results to have the same number of columns.
 

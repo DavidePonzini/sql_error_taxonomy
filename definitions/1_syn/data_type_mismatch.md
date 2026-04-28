@@ -12,7 +12,7 @@ FROM customer
 WHERE cName = 7;
 ```
 
-### Explaination
+### Explanation
 The condition in the WHERE clause compares a string column (cName) with an integer value (7), which is not valid.
 
 ### Correction

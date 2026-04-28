@@ -13,7 +13,7 @@ ORDER BY cName
 LIMIT 10;
 ```
 
-### Explaination
+### Explanation
 The query doesn't satisfy its data demand, since it lists the first 10 customers instead of the first 3 customers.
 
 ### Correction

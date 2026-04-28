@@ -13,7 +13,7 @@ WHERE city IN (
 );
 ```
 
-### Explaination
+### Explanation
 The main query retrieves cities from the `customer` table that are present in the list of cities returned by the subquery. The order of cities in the subquery's result does not affect which cities are included in the final output, making the `ORDER BY` clause unnecessary in this context.
 
 ### Correction

@@ -12,7 +12,7 @@ FROM customer
 ORDER BY cID, cName;
 ```
 
-### Explaination
+### Explanation
 The query orders the results by both `cID` and `cName`. However, since `cID` is a primary key, it uniquely identifies each row. Therefore, ordering by `cName` after `cID` does not change the order of the results, making it unnecessary.
 
 ### Correction

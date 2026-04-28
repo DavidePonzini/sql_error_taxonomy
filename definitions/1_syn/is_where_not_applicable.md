@@ -12,7 +12,7 @@ customer
 WHERE age IS 18;
 ```
 
-### Explaination
+### Explanation
 The IS operator should only be used for checking `NULL` values or boolean expressions (e.g., `IS TRUE`, `IS FALSE`). For other comparisons, use standard comparison operators like `=`, `<>`, `>`, `<`, `>=`, `<=`.
 
 ### Correction

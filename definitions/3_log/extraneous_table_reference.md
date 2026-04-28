@@ -11,7 +11,7 @@ SELECT cName
 FROM customer, store;
 ```
 
-### Explaination
+### Explanation
 The query references both the `customer` and `store` tables, but the data demand only requires information from the `customer` table. The inclusion of the `store` table creates a Cartesian product, resulting in multiple rows for each customer name, which is not the intended outcome.
 
 ### Correction

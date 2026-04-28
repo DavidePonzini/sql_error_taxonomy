@@ -16,7 +16,7 @@ FROM customer
 WHERE age > 30;
 ```
 
-### Explaination
+### Explanation
 The two queries retrieve names of customer from disjoint age groups (younger than 18 and older than 30). Since there is no overlap between these two groups, the same result can be achieved with a single query using an `OR` condition, which is more efficient and easier to read.
 
 ### Correction

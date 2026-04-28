@@ -12,7 +12,7 @@ FROM customer
 WHERE age BETWEEN 18;
 ```
 
-### Explaination
+### Explanation
 The BETWEEN operator requires two values to define the range: a lower bound and an upper bound.
 
 ### Correction

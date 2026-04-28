@@ -11,7 +11,7 @@ SELECT COUNT(cID)
 FROM customer;
 ```
 
-### Explaination
+### Explanation
 The `cID` column is the primary key of the `customer` table and as such it cannot contain any `NULL` values. Therefore, using `COUNT(cID)` is equivalent to `COUNT(*)`, as all rows will be counted. Using `COUNT(*)` is more straightforward and efficient in this case.
 
 ### Correction

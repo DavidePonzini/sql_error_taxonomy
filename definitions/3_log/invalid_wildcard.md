@@ -12,7 +12,7 @@ FROM customer
 WHERE cName LIKE 'J*n';
 ```
 
-### Explaination
+### Explanation
 The query uses the `*` wildcard to match any sequence of characters, which is common in other programming languages but not in SQL. In SQL, the `%` wildcard is used for pattern matching. As a result, the query does not return any results because it is looking for names that literally contain 'J*n' instead of names that start with 'J' and end with 'n'.
 
 ### Correction

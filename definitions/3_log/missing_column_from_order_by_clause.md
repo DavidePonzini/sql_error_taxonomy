@@ -12,7 +12,7 @@ FROM customer
 ORDER BY cName;
 ```
 
-### Explaination
+### Explanation
 The query retrieves the names and ages of all customers but only orders the results by `cName`. 
 Customers with the same name are unsorted within their group.
 

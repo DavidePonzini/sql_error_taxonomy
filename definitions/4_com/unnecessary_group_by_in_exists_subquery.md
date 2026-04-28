@@ -17,7 +17,7 @@ WHERE EXISTS (
 );
 ```
 
-### Explaination
+### Explanation
 The `GROUP BY` clause in the `EXISTS` subquery is unnecessary because `EXISTS` only checks whether at least one row is returned by the subquery. The grouping does not affect the existence check and adds unnecessary complexity to the query.
 
 ### Correction
