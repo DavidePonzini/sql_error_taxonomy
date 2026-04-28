@@ -1,4 +1,4 @@
-## Grouping error: aggregate functions cannot be nested
+## Aggregate functions cannot be nested
 ### Definition
 Aggregate functions cannot be nested within each other in a query.
 

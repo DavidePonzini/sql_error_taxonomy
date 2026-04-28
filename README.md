@@ -91,11 +91,11 @@ Syntax errors typically reflect difficulties with SQL grammar, clause structure,
 | ID  | Name
 | :-- | :---
 | 14  | [Using aggregate function outside SELECT or HAVING](definitions/1_syn/using_aggregate_function_outside_select_or_having.md)
-| 15  | [Grouping error: aggregate functions cannot be nested](definitions/1_syn/grouping_error_aggregate_functions_cannot_be_nested.md)
+| 15  | [Aggregate functions cannot be nested](definitions/1_syn/aggregate_functions_cannot_be_nested.md)
 ### Illegal or insufficient grouping
 | ID  | Name
 | :-- | :---
-| 16  | [Grouping error: extraneous or omitted grouping column](definitions/1_syn/grouping_error_extraneous_or_omitted_grouping_column.md)
+| 16  | [Extraneous or omitted grouping column](definitions/1_syn/extraneous_or_omitted_grouping_column.md)
 | 17  | [Strange HAVING: HAVING without GROUP BY](definitions/1_syn/strange_having_having_without_group_by.md)
 ### Invalid subqueries
 | ID  | Name

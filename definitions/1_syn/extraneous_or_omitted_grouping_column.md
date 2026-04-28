@@ -1,4 +1,4 @@
-## Grouping error: extraneous or omitted grouping column
+## Extraneous or omitted grouping column
 ### Definition
 When using GROUP BY, all non-aggregated columns in the SELECT clause must be included in the GROUP BY clause. Only aggregated columns or columns included in the GROUP BY clause can be referenced in the HAVING clause.
 
