@@ -43,12 +43,10 @@ Underlined attributes collectively form the primary key for each table.
 | product    | <ins>pID</ins>, pName, suffix                   
 | inventory  | <ins>sID</ins>, <ins>pID</ins>, date, quantity, unit_price   |
 
-## Versioning
-Each error type is assigned a unique identifier which is may change across versions.
+## Updates and maintenance
+Each error type is assigned a unique identifier which is will never be changed or removed, but new IDs may be added in the future.
 
 Existing taxonomies can be updated by running again the [error categorization module](https://github.com/DavidePonzini/sql_error_categorizer) on the same set of queries, and reclassifying any errors that have changed category or type.
-
-- **Current version: 1**
 
 
 ## Syntax errors

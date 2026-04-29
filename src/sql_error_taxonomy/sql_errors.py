@@ -1,8 +1,6 @@
 from enum import IntEnum, StrEnum
 from dataclasses import dataclass
 
-VERSION: int = 1
-
 class SqlErrorCategory(StrEnum):
     """Enumeration of SQL error categories."""
     SYNTAX = "SYN"
@@ -17,7 +15,12 @@ class SqlErrorDefinition:
     category: SqlErrorCategory
 
 class SqlErrors(IntEnum):
-    """Enumeration of SQL error types with unique identifiers."""
+    """
+        Enumeration of SQL error types with unique identifiers.
+
+        **NOTE:** The unique identifiers assigned to each error type will never be changed or removed, but new IDs may be added in the future.
+    
+    """
 
     # Syntax errors
     AMBIGUOUS_COLUMN = 1
@@ -164,11 +167,7 @@ class SqlErrors(IntEnum):
 
     @property
     def error_id(self) -> int:
-        """
-            Returns the unique identifier of the SQL error.
-
-            **NOTE:** IDs can change across versions, so they should be stored alongside the taxonomy version.
-        """
+        """Returns the unique identifier of the SQL error."""
         return self.value
 
 _SQL_ERROR_DEFINITIONS: dict[SqlErrors, SqlErrorDefinition] = {
