@@ -32,28 +32,28 @@ class SqlErrors(IntEnum):
     INVALID_SCHEMA_NAME = 7
     MISSPELLINGS = 8
     SYNONYMS = 9
-    OMITTING_QUOTES_AROUND_CHARACTER_DATA = 10
+    OMITTED_QUOTES = 10
     FAILURE_TO_SPECIFY_COLUMN_NAME_TWICE = 11
     IS_WHERE_NOT_APPLICABLE = 12
     DATA_TYPE_MISMATCH = 13
-    USING_AGGREGATE_FUNCTION_OUTSIDE_SELECT_OR_HAVING = 14
+    AGGREGATE_FUNCTION_OUTSIDE_SELECT_OR_HAVING = 14
     AGGREGATE_FUNCTIONS_CANNOT_BE_NESTED = 15
     EXTRANEOUS_OR_OMITTED_GROUPING_COLUMN = 16
-    STRANGE_HAVING_HAVING_WITHOUT_GROUP_BY = 17
+    HAVING_WITHOUT_GROUP_BY = 17
     TOO_MANY_COLUMNS_IN_SUBQUERY = 18
     MISSING_QUANTIFIER = 19
     CONFUSING_FUNCTION_WITH_FUNCTION_PARAMETER = 20
     USING_WHERE_TWICE = 21
-    OMITTING_THE_FROM_CLAUSE = 22
+    OMITTED_THE_FROM_CLAUSE = 22
     COMPARISON_WITH_NULL = 23
-    OMITTING_THE_SEMICOLON = 24
+    OMITTED_SEMICOLON = 24
     DATE_TIME_FIELD_OVERFLOW = 25
     DUPLICATE_CLAUSE = 26
-    USING_AN_UNDEFINED_CORRELATION_NAME = 27
-    CONFUSING_TABLE_NAMES_WITH_COLUMN_NAMES = 28
-    CONFUSING_THE_ORDER_OF_KEYWORDS = 29
-    CONFUSING_THE_SYNTAX_OF_KEYWORDS = 30
-    OMITTING_COMMAS = 31
+    UNDEFINED_CORRELATION_NAME = 27
+    CONFUSED_TABLE_NAMES_WITH_COLUMN_NAMES = 28
+    CONFUSED_THE_ORDER_OF_KEYWORDS = 29
+    CONFUSED_THE_SYNTAX_OF_KEYWORDS = 30
+    OMITTED_COMMAS = 31
     UNMATCHED_BRACKETS = 32
     CURLY_OR_SQUARE_BRACKETS = 33
     NONSTANDARD_KEYWORDS_OR_STANDARD_KEYWORDS_IN_WRONG_CONTEXT = 34
@@ -65,7 +65,7 @@ class SqlErrors(IntEnum):
     IMPLIED_TAUTOLOGICAL_OR_INCONSISTENT_EXPRESSION = 38
     DISTINCT_IN_SUM_OR_AVG = 39
     DISTINCT_THAT_MIGHT_REMOVE_IMPORTANT_DUPLICATES = 40
-    MIXING_A_GREATER_THAN_0_WITH_IS_NOT_NULL_OR_EMPTY_STRING_WITH_NULL = 41
+    MIXED_A_GREATER_THAN_0_WITH_IS_NOT_NULL_OR_EMPTY_STRING_WITH_NULL = 41
     NULL_IN_IN_ANY_ALL_SUBQUERY = 42
     JOIN_CONDITION_ON_UNMATCHABLE_COLUMN = 43
     MANY_DUPLICATES = 44
@@ -77,14 +77,14 @@ class SqlErrors(IntEnum):
     OR_INSTEAD_OF_AND = 48
     EXTRANEOUS_NOT_OPERATOR = 49
     MISSING_NOT_OPERATOR = 50
-    SUBSTITUTING_EXISTENCE_NEGATION_WITH_NOT_EQUAL_TO = 51
+    SUBSTITUTED_EXISTENCE_NEGATION_WITH_NOT_EQUAL_TO = 51
     INCORRECT_COMPARISON_OPERATOR_OR_INCORRECT_VALUE_COMPARED = 52
     INCORRECT_TABLE_REFERENCE = 53
     MISSING_TABLE_REFERENCE = 54
     EXTRANEOUS_TABLE_REFERENCE = 55
     JOIN_CONDITION_ON_INCORRECT_COLUMN = 56
     JOIN_CONDITION_WITH_INCORRECT_COMPARISON_OPERATOR = 57
-    OMITTING_A_JOIN_CONDITION = 58
+    OMITTED_A_JOIN_CONDITION = 58
     CONDITION_ON_OUTER_JOIN = 59
     IMPROPER_NESTING_OF_EXPRESSIONS = 60
     IMPROPER_NESTING_OF_SUBQUERIES = 61
@@ -201,7 +201,7 @@ _SQL_ERROR_DEFINITIONS: dict[SqlErrors, SqlErrorDefinition] = {
         'Synonyms',
         SqlErrorCategory.SYNTAX
     ),
-    SqlErrors.OMITTING_QUOTES_AROUND_CHARACTER_DATA: SqlErrorDefinition(
+    SqlErrors.OMITTED_QUOTES: SqlErrorDefinition(
         'Omitting quotes around character data',
         SqlErrorCategory.SYNTAX
     ),
@@ -217,7 +217,7 @@ _SQL_ERROR_DEFINITIONS: dict[SqlErrors, SqlErrorDefinition] = {
         'Data type mismatch',
         SqlErrorCategory.SYNTAX
     ),
-    SqlErrors.USING_AGGREGATE_FUNCTION_OUTSIDE_SELECT_OR_HAVING: SqlErrorDefinition(
+    SqlErrors.AGGREGATE_FUNCTION_OUTSIDE_SELECT_OR_HAVING: SqlErrorDefinition(
         'Using aggregate function outside SELECT or HAVING',
         SqlErrorCategory.SYNTAX
     ),
@@ -229,7 +229,7 @@ _SQL_ERROR_DEFINITIONS: dict[SqlErrors, SqlErrorDefinition] = {
         'Extraneous or omitted grouping column',
         SqlErrorCategory.SYNTAX
     ),
-    SqlErrors.STRANGE_HAVING_HAVING_WITHOUT_GROUP_BY: SqlErrorDefinition(
+    SqlErrors.HAVING_WITHOUT_GROUP_BY: SqlErrorDefinition(
         'Strange HAVING: HAVING without GROUP BY',
         SqlErrorCategory.SYNTAX
     ),
@@ -249,7 +249,7 @@ _SQL_ERROR_DEFINITIONS: dict[SqlErrors, SqlErrorDefinition] = {
         'Using WHERE twice',
         SqlErrorCategory.SYNTAX
     ),
-    SqlErrors.OMITTING_THE_FROM_CLAUSE: SqlErrorDefinition(
+    SqlErrors.OMITTED_THE_FROM_CLAUSE: SqlErrorDefinition(
         'Omitting the FROM clause',
         SqlErrorCategory.SYNTAX
     ),
@@ -257,7 +257,7 @@ _SQL_ERROR_DEFINITIONS: dict[SqlErrors, SqlErrorDefinition] = {
         'Comparison with NULL',
         SqlErrorCategory.SYNTAX
     ),
-    SqlErrors.OMITTING_THE_SEMICOLON: SqlErrorDefinition(
+    SqlErrors.OMITTED_SEMICOLON: SqlErrorDefinition(
         'Omitting the semicolon',
         SqlErrorCategory.SYNTAX
     ),
@@ -269,23 +269,23 @@ _SQL_ERROR_DEFINITIONS: dict[SqlErrors, SqlErrorDefinition] = {
         'Duplicate clause',
         SqlErrorCategory.SYNTAX
     ),
-    SqlErrors.USING_AN_UNDEFINED_CORRELATION_NAME: SqlErrorDefinition(
+    SqlErrors.UNDEFINED_CORRELATION_NAME: SqlErrorDefinition(
         'Using an undefined correlation name',
         SqlErrorCategory.SYNTAX
     ),
-    SqlErrors.CONFUSING_TABLE_NAMES_WITH_COLUMN_NAMES: SqlErrorDefinition(
+    SqlErrors.CONFUSED_TABLE_NAMES_WITH_COLUMN_NAMES: SqlErrorDefinition(
         'Confusing table names with column names',
         SqlErrorCategory.SYNTAX
     ),
-    SqlErrors.CONFUSING_THE_ORDER_OF_KEYWORDS: SqlErrorDefinition(
+    SqlErrors.CONFUSED_THE_ORDER_OF_KEYWORDS: SqlErrorDefinition(
         'Confusing the order of keywords (e.g., FROM customer SELECT fee)',
         SqlErrorCategory.SYNTAX
     ),
-    SqlErrors.CONFUSING_THE_SYNTAX_OF_KEYWORDS: SqlErrorDefinition(
+    SqlErrors.CONFUSED_THE_SYNTAX_OF_KEYWORDS: SqlErrorDefinition(
         "Confusing the syntax of keywords (e.g., LIKE ('A,' 'B'))",
         SqlErrorCategory.SYNTAX
     ),
-    SqlErrors.OMITTING_COMMAS: SqlErrorDefinition(
+    SqlErrors.OMITTED_COMMAS: SqlErrorDefinition(
         'Omitting commas',
         SqlErrorCategory.SYNTAX
     ),
@@ -325,7 +325,7 @@ _SQL_ERROR_DEFINITIONS: dict[SqlErrors, SqlErrorDefinition] = {
         'DISTINCT that might remove important duplicates',
         SqlErrorCategory.SEMANTIC
     ),
-    SqlErrors.MIXING_A_GREATER_THAN_0_WITH_IS_NOT_NULL_OR_EMPTY_STRING_WITH_NULL: SqlErrorDefinition(
+    SqlErrors.MIXED_A_GREATER_THAN_0_WITH_IS_NOT_NULL_OR_EMPTY_STRING_WITH_NULL: SqlErrorDefinition(
         'Mixing a >0 with IS NOT NULL or empty string with NULL',
         SqlErrorCategory.SEMANTIC
     ),
@@ -365,7 +365,7 @@ _SQL_ERROR_DEFINITIONS: dict[SqlErrors, SqlErrorDefinition] = {
         'Missing NOT operator',
         SqlErrorCategory.LOGICAL
     ),
-    SqlErrors.SUBSTITUTING_EXISTENCE_NEGATION_WITH_NOT_EQUAL_TO: SqlErrorDefinition(
+    SqlErrors.SUBSTITUTED_EXISTENCE_NEGATION_WITH_NOT_EQUAL_TO: SqlErrorDefinition(
         'Substituting existence negation with <>',
         SqlErrorCategory.LOGICAL
     ),
@@ -393,7 +393,7 @@ _SQL_ERROR_DEFINITIONS: dict[SqlErrors, SqlErrorDefinition] = {
         'Join condition with incorrect comparison operator',
         SqlErrorCategory.LOGICAL
     ),
-    SqlErrors.OMITTING_A_JOIN_CONDITION: SqlErrorDefinition(
+    SqlErrors.OMITTED_A_JOIN_CONDITION: SqlErrorDefinition(
         'Omitting a join condition',
         SqlErrorCategory.LOGICAL
     ),
