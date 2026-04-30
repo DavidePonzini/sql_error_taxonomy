@@ -44,15 +44,15 @@ class SqlErrors(IntEnum):
     MISSING_QUANTIFIER = 19
     CONFUSING_FUNCTION_WITH_FUNCTION_PARAMETER = 20
     USING_WHERE_TWICE = 21
-    OMITTED_THE_FROM_CLAUSE = 22
+    OMITTED_FROM_CLAUSEE = 22
     COMPARISON_WITH_NULL = 23
     OMITTED_SEMICOLON = 24
     DATE_TIME_FIELD_OVERFLOW = 25
     DUPLICATE_CLAUSE = 26
     UNDEFINED_CORRELATION_NAME = 27
     CONFUSED_TABLE_NAMES_WITH_COLUMN_NAMES = 28
-    CONFUSED_THE_ORDER_OF_KEYWORDS = 29
-    CONFUSED_THE_SYNTAX_OF_KEYWORDS = 30
+    CONFUSED_ORDER_OF_KEYWORDS = 29
+    CONFUSED_SYNTAX_OF_KEYWORDS = 30
     OMITTED_COMMAS = 31
     UNMATCHED_BRACKETS = 32
     CURLY_OR_SQUARE_BRACKETS = 33
@@ -127,7 +127,7 @@ class SqlErrors(IntEnum):
     UNNECESSARY_DISTINCT_IN_SELECT_CLAUSE = 96
     UNNECESSARY_TABLE_REFERENCE = 97
     UNUSED_CORRELATION_NAME = 98
-    TABLES_HAVE_THE_SAME_DATA = 99
+    TABLES_HAVE_SAME_DATA = 99
     CORRELATION_NAME_IDENTICAL_TO_TABLE_NAME = 100
     UNNECESSARILY_GENERAL_COMPARISON_OPERATOR = 101
     LIKE_WITHOUT_WILDCARDS = 102
@@ -145,7 +145,7 @@ class SqlErrors(IntEnum):
     ORDER_BY_IN_SUBQUERY = 114
     INEFFICIENT_HAVING = 115
     INEFFICIENT_UNION = 116
-    CONDITION_IN_THE_SUBQUERY_CAN_BE_MOVED_UP = 117
+    CONDITION_IN_SUBQUERY_CAN_BE_MOVED_UP = 117
     OUTER_JOIN_CAN_BE_REPLACED_BY_INNER_JOIN = 118
     UNUSED_CTE = 119
 
@@ -249,7 +249,7 @@ _SQL_ERROR_DEFINITIONS: dict[SqlErrors, SqlErrorDefinition] = {
         'Using WHERE twice',
         SqlErrorCategory.SYNTAX
     ),
-    SqlErrors.OMITTED_THE_FROM_CLAUSE: SqlErrorDefinition(
+    SqlErrors.OMITTED_FROM_CLAUSE: SqlErrorDefinition(
         'Omitting the FROM clause',
         SqlErrorCategory.SYNTAX
     ),
@@ -277,11 +277,11 @@ _SQL_ERROR_DEFINITIONS: dict[SqlErrors, SqlErrorDefinition] = {
         'Confusing table names with column names',
         SqlErrorCategory.SYNTAX
     ),
-    SqlErrors.CONFUSED_THE_ORDER_OF_KEYWORDS: SqlErrorDefinition(
+    SqlErrors.CONFUSED_ORDER_OF_KEYWORDS: SqlErrorDefinition(
         'Confusing the order of keywords (e.g., FROM customer SELECT fee)',
         SqlErrorCategory.SYNTAX
     ),
-    SqlErrors.CONFUSED_THE_SYNTAX_OF_KEYWORDS: SqlErrorDefinition(
+    SqlErrors.CONFUSED_SYNTAX_OF_KEYWORDS: SqlErrorDefinition(
         "Confusing the syntax of keywords (e.g., LIKE ('A,' 'B'))",
         SqlErrorCategory.SYNTAX
     ),
@@ -557,7 +557,7 @@ _SQL_ERROR_DEFINITIONS: dict[SqlErrors, SqlErrorDefinition] = {
         'Unused correlation name',
         SqlErrorCategory.COMPLICATION
     ),
-    SqlErrors.TABLES_HAVE_THE_SAME_DATA: SqlErrorDefinition(
+    SqlErrors.TABLES_HAVE_SAME_DATA: SqlErrorDefinition(
         'Tables have the same data',
         SqlErrorCategory.COMPLICATION
     ),
@@ -629,7 +629,7 @@ _SQL_ERROR_DEFINITIONS: dict[SqlErrors, SqlErrorDefinition] = {
         'Inefficient UNION',
         SqlErrorCategory.COMPLICATION
     ),
-    SqlErrors.CONDITION_IN_THE_SUBQUERY_CAN_BE_MOVED_UP: SqlErrorDefinition(
+    SqlErrors.CONDITION_IN_SUBQUERY_CAN_BE_MOVED_UP: SqlErrorDefinition(
         'Condition in the subquery can be moved up',
         SqlErrorCategory.COMPLICATION
     ),
