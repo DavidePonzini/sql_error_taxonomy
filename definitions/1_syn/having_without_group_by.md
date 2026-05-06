@@ -1,4 +1,4 @@
-## Strange HAVING: HAVING without GROUP BY
+## HAVING without GROUP BY
 ### Definition
 The query uses a `HAVING` clause without a corresponding `GROUP BY` clause.
 
