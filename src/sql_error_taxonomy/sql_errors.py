@@ -173,16 +173,6 @@ class SqlErrors(IntEnum):
         '''Returns the definition of the SQL error.'''
         return _SQL_ERROR_DEFINITIONS[self]
 
-    @property
-    def category(self) -> SqlErrorCategory:
-        '''Returns the category of the SQL error.'''
-        return self.definition.category
-
-    @property
-    def error_id(self) -> int:
-        '''Returns the unique identifier of the SQL error.'''
-        return self.value
-
 _SQL_ERROR_DEFINITIONS: dict[SqlErrors, SqlErrorDefinition] = {
     SqlErrors.OMITTING_CORRELATION_NAMES: SqlErrorDefinition(
         'Omitting correlation names',
