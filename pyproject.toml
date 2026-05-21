@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "sql_error_taxonomy"
+name = "sqlerrors"
 version = "2.0.0"
 authors = [
   { name="Davide Ponzini", email="davide.ponzini95@gmail.com" },
@@ -19,6 +19,6 @@ classifiers = [
 dependencies = []
 
 [project.urls]
-"Repository" = "https://github.com/DavidePonzini/sql_error_taxonomy"
-"Documentation" = "https://sql-error-taxonomy.readthedocs.io/en/latest/index.html"
-"Bug Tracker" = "https://github.com/DavidePonzini/sql_error_taxonomy/issues"
+"Repository" = "https://github.com/DavidePonzini/sqlerrors"
+"Documentation" = "https://sqlerrors.readthedocs.io/en/latest/index.html"
+"Bug Tracker" = "https://github.com/DavidePonzini/sqlerrors/issues"

@@ -1,6 +1,6 @@
 import pytest
 
-from sql_error_taxonomy import SqlErrors
+from sqlerrors import SqlErrors
 
 DEPRECATED_ERROR_IDS = {
     1,

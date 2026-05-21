@@ -2,7 +2,7 @@
 # Type: PyPi
 # Author: Davide Ponzini
 
-NAME=sql_error_taxonomy
+NAME=sqlerrors
 VENV=./venv
 REQUIREMENTS=requirements.txt
 

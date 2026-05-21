@@ -1,6 +1,6 @@
 import pytest
 
-from sql_error_taxonomy import SqlErrors
+from sqlerrors import SqlErrors
 
 EXPECTED_IDS = {
     1: 'OMITTING_CORRELATION_NAMES',
